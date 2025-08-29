@@ -11,6 +11,7 @@
   <div class="container">
     <!-- HEADER -->
     <header class="header">
+      <!-- Слева: одинаковая ширина двух рядов -->
       <div class="brand">
         <span class="approved-label">Підтверджено в</span>
         <div class="approved-logos">
@@ -18,12 +19,13 @@
           <span class="chip chip-diya">Дія</span>
         </div>
       </div>
+      <!-- Справа: выровнено по центру, одинаковая высота -->
       <div class="actions">
         <div class="lang" id="lang">
           <button data-lang="uk" class="active">УКР</button>
           <button data-lang="ru">РУС</button>
         </div>
-        <button class="burger" id="burger"><span></span></button>
+        <button class="burger" id="burger" aria-label="Меню"><span></span></button>
       </div>
     </header>
 
@@ -36,7 +38,9 @@
     <!-- GRID -->
     <section class="grid">
       <article class="card">
-        <img class="media" src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=70&auto=format&fit=crop" alt="Автоцивілка">
+        <img class="media" loading="lazy"
+             src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=70&auto=format&fit=crop"
+             alt="Автоцивілка">
         <div class="body">
           <h2 class="h" data-i18n="osagoTitle">Автоцивілка</h2>
           <p class="d" data-i18n="osagoDesc">Електронний поліс ОСЦПВ за кілька хвилин</p>
@@ -47,7 +51,9 @@
       </article>
 
       <article class="card">
-        <img class="media" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&q=70&auto=format&fit=crop" alt="Зелена карта">
+        <img class="media" loading="lazy" referrerpolicy="no-referrer"
+             src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&q=70&auto=format&fit=crop"
+             alt="Зелена карта">
         <div class="body">
           <h2 class="h" data-i18n="greenTitle">Зелена карта</h2>
           <p class="d" data-i18n="greenDesc">Міжнародне страхування для виїзду за кордон</p>
@@ -58,7 +64,9 @@
       </article>
 
       <article class="card">
-        <img class="media" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=70&auto=format&fit=crop" alt="КАСКО">
+        <img class="media" loading="lazy"
+             src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=70&auto=format&fit=crop"
+             alt="КАСКО">
         <div class="body">
           <h2 class="h">КАСКО</h2>
           <p class="d" data-i18n="kaskoDesc">Комплексний захист вашого авто</p>
@@ -71,6 +79,10 @@
   </div>
 
   <script>
+    // Вебапп (без влияния на палитру)
+    try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
+
+    // i18n укр/рус
     const dict = {
       uk:{ title:'Страхові продукти', subtitle:'Обирайте продукт та оформлюйте поліс онлайн',
            choose:'Обрати', osagoTitle:'Автоцивілка', osagoDesc:'Електронний поліс ОСЦПВ за кілька хвилин',
@@ -86,11 +98,13 @@
       document.querySelectorAll('[data-i18n]').forEach(el=>{
         const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];
       });
-      document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+      document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
       localStorage.setItem('lang',lang);
     }
     const saved=localStorage.getItem('lang')||'uk'; applyLang(saved);
-    document.getElementById('lang').addEventListener('click',e=>{if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang)});
+    document.getElementById('lang').addEventListener('click',e=>{
+      if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang);
+    });
     document.getElementById('burger').addEventListener('click',()=>alert('Меню скоро буде ✨'));
   </script>
 </body>
