@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Автоцивілка — Розрахунок</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <style>
+    :root{
+      --bg: var(--tg-theme-bg-color);
+      --text: var(--tg-theme-text-color);
+      --hint: var(--tg-theme-hint-color);
+      --card: rgba(255,255,255,.98);
+      --shadow: 0 12px 28px rgba(0,0,0,.12);
+      --accent: #1f2b5a; /* цвет кнопки, близкий к референсу */
+      --radius: 22px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+    .container{max-width:980px;margin:0 auto;padding:16px 14px 28px}
+    /* header как на главной */
+    .header{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .badge{display:flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:14px;background:var(--card);box-shadow:var(--shadow);font-weight:700}
+    .badge.mtsbu{color:#1f945a}
+    .badge.diya{background:#111;color:#fff}
+    .lang{display:flex;background:var(--card);box-shadow:var(--shadow);border-radius:999px;overflow:hidden}
+    .lang button{border:0;background:transparent;padding:8px 14px;cursor:pointer;color:var(--hint);font-weight:600}
+    .lang button.active{background:#2ea6ff;color:#fff}
+
+    /* hero/form layout */
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;margin-top:8px}
+    @media(min-width:860px){.hero{grid-template-columns:1.1fr 1fr}}
+    .titleBig{font-size:clamp(28px,6vw,56px);line-height:1.05;font-weight:900;letter-spacing:-.02em}
+    .card{background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:22px}
+    .card h2{margin:0 0 14px 0;font-size:24px}
+
+    /* form controls */
+    .field{margin-bottom:14px}
+    .label{display:block;margin:0 0 8px 0;font-weight:700}
+    .input,.select{
+      width:100%;padding:14px 16px;border-radius:14px;border:1px solid rgba(0,0,0,.12);background:#fff;color:#111;font-size:16px;outline:none;
+    }
+    .row{display:flex;gap:12px;align-items:center}
+    .checkbox{width:20px;height:20px}
+    .btn{
+      width:100%;padding:16px 18px;border:0;border-radius:16px;background:var(--accent);color:#fff;font-weight:800;font-size:18px;cursor:pointer;
+    }
+    .back{margin:6px 0 0 2px;color:var(--hint);text-decoration:none;display:inline-flex;gap:8px;align-items:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- header -->
+    <div class="header">
+      <div class="brand">
+        <div class="badge mtsbu">МТСБУ</div>
+        <div class="badge diya">Дія</div>
+      </div>
+      <div class="lang" id="lang">
+        <button data-lang="uk" class="active">УКР</button>
+        <button data-lang="ru">РУС</button>
+        <button data-lang="en">EN</button>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div class="hero">
+      <div class="titleBig" data-i18n="title_big">
+        Електронний поліс ОСЦПВ
+      </div>
+
+      <div class="card">
+        <h2 data-i18n="form_title">Введіть номер авто</h2>
+
+        <div class="field">
+          <label class="label" for="plate" data-i18n="plate_label">Номер транспортного засобу</label>
+          <input id="plate" class="input" placeholder="AA1234AA" inputmode="latin" maxlength="10" />
+        </div>
+
+        <div class="field">
+          <label class="label" for="period" data-i18n="period_label">Період дії</label>
+          <select id="period" class="select">
+            <option value="12" selected>12 місяців</option>
+            <option value="6">6 місяців</option>
+          </select>
+        </div>
+
+        <div class="field row">
+          <input id="no_paid" type="checkbox" class="checkbox" checked />
+          <label for="no_paid" data-i18n="no_paid">
+            ТЗ не використовується для перевезення пасажирів та/або вантажів за плату
+          </label>
+        </div>
+
+        <button id="calc" class="btn" data-i18n="calculate">Розрахувати</button>
+        <a class="back" href="index.html" data-i18n="back">← На головну</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tg = window.Telegram?.WebApp; tg?.expand();
+
+    // простая мультиязычность (как на главной)
+    const dict = {
+      uk:{
+        title_big:"Електронний поліс ОСЦПВ",
+        form_title:"Введіть номер авто",
+        plate_label:"Номер транспортного засобу",
+        period_label:"Період дії",
+        no_paid:"ТЗ не використовується для перевезення пасажирів та/або вантажів за плату",
+        calculate:"Розрахувати",
+        back:"← На головну",
+      },
+      ru:{
+        title_big:"Электронный полис ОСАГО",
+        form_title:"Введите номер авто",
+        plate_label:"Номер транспортного средства",
+        period_label:"Период действия",
+        no_paid:"ТС не используется для перевозки пассажиров и/или грузов за плату",
+        calculate:"Рассчитать",
+        back:"← На главную",
+      },
+      en:{
+        title_big:"Electronic MTPL Policy",
+        form_title:"Enter car plate",
+        plate_label:"Vehicle plate number",
+        period_label:"Validity period",
+        no_paid:"The vehicle is not used for paid passenger/cargo transport",
+        calculate:"Calculate",
+        back:"← Home",
+      }
+    };
+
+    function applyLang(lang){
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const k = el.getAttribute("data-i18n");
+        el.textContent = dict[lang][k] ?? el.textContent;
+      });
+      document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("active", b.dataset.lang===lang));
+      localStorage.setItem("lang", lang);
+      document.documentElement.lang = lang;
+
+      // период: порядок/названия в select под язык
+      const period = document.getElementById("period");
+      if(lang==="ru"){ period.options[0].text = "12 месяцев"; period.options[1].text = "6 месяцев"; }
+      else if(lang==="en"){ period.options[0].text = "12 months"; period.options[1].text = "6 months"; }
+      else { period.options[0].text = "12 місяців"; period.options[1].text = "6 місяців"; }
+    }
+
+    const saved = localStorage.getItem("lang") || "uk";
+    applyLang(saved);
+    document.getElementById("lang").addEventListener("click",(e)=>{
+      if(e.target.tagName==="BUTTON") applyLang(e.target.dataset.lang);
+    });
+
+    // обработчик "Розрахувати" — отправим данные боту (можно заменить на переход/запрос к API)
+    document.getElementById("calc").addEventListener("click", ()=>{
+      const payload = {
+        action:"calc_osago",
+        plate: document.getElementById("plate").value.trim(),
+        period: document.getElementById("period").value, // '6' | '12'
+        no_paid: document.getElementById("no_paid").checked
+      };
+      if(tg?.sendData){ tg.sendData(JSON.stringify(payload)); }
+      else { alert(JSON.stringify(payload,null,2)); }
+    });
+  </script>
+</body>
+</html>
