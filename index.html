@@ -7,7 +7,6 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <style>
     :root{
-      /* Белая тема по умолчанию, не завязана на Telegram */
       --bg:#ffffff; --text:#101828; --muted:#667085;
       --btn:#2b50a7; --btn-text:#ffffff;
       --card:#ffffff; --chip:#eef2ff;
@@ -17,7 +16,7 @@
     html,body{
       margin:0; padding:0; background:var(--bg); color:var(--text);
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      max-width:100%; overflow-x:hidden;  /* фикс переполнения WebView */
+      max-width:100%; overflow-x:hidden;
     }
     a{text-decoration:none; color:inherit}
 
@@ -29,15 +28,25 @@
       padding:12px 14px; background:var(--card); border-radius:16px; box-shadow:var(--shadow);
       position:sticky; top:8px; z-index:10; flex-wrap:wrap;
     }
-    /* Слева: Підтверджено + логотипы (логотипы уходят НА СТРОКУ НИЖЕ при нехватке места) */
-    .brand{display:flex; flex-direction:column; align-items:flex-start; gap:6px; flex:1 1 auto; min-width:0}
-    .approved-label{font-weight:700; color:var(--muted); font-size:14px; line-height:1.2; white-space:nowrap}
-    .approved-logos{display:flex; gap:10px}
-    .chip{display:flex; align-items:center; justify-content:center; padding:6px 12px; border-radius:999px; font-weight:800; white-space:nowrap}
+    /* Слева */
+    .brand{
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      width:200px;  /* ширина блока, можно подстроить */
+      gap:6px;
+    }
+    .approved-label{
+      font-weight:700; color:var(--muted); font-size:14px; line-height:1.2; text-align:center; width:100%;
+    }
+    .approved-logos{
+      display:flex; justify-content:center; gap:10px; width:100%;
+    }
+    .chip{
+      flex:1; text-align:center; padding:6px 12px; border-radius:999px; font-weight:800; white-space:nowrap;
+    }
     .chip-mtsbu{background:#e9f7f0; color:#1f945a}
     .chip-diya{background:#111; color:#fff; border-radius:12px}
 
-    /* Справа: язык + бургер */
+    /* Справа */
     .actions{display:flex; align-items:center; gap:10px; flex:0 0 auto; margin-left:auto}
     .lang{display:flex; background:var(--chip); border-radius:999px; overflow:hidden; box-shadow:var(--shadow)}
     .lang button{border:0; background:transparent; padding:8px 14px; cursor:pointer; color:#41557b; font-weight:700}
@@ -65,21 +74,18 @@
     .actions-row{padding:0 16px 16px}
     .btn{display:block; width:100%; text-align:center; padding:12px 16px; border-radius:12px; background:var(--btn); color:var(--btn-text); font-weight:800}
     .btn:active{transform:translateY(1px)}
-
-    /* Сверхузкие экраны: скрыть слово для экономии */
-    @media (max-width:380px){ .approved-label{display:none} }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- HEADER -->
-    <header class="header" aria-label="Головна навігація">
+    <header class="header">
       <!-- Слева -->
       <div class="brand">
         <span class="approved-label">Підтверджено в</span>
         <div class="approved-logos">
-          <span class="chip chip-mtsbu" aria-label="МТСБУ">МТСБУ</span>
-          <span class="chip chip-diya" aria-label="Дія">Дія</span>
+          <span class="chip chip-mtsbu">МТСБУ</span>
+          <span class="chip chip-diya">Дія</span>
         </div>
       </div>
       <!-- Справа -->
@@ -88,7 +94,7 @@
           <button data-lang="uk" class="active">УКР</button>
           <button data-lang="ru">РУС</button>
         </div>
-        <button class="burger" id="burger" aria-label="Меню"><span></span></button>
+        <button class="burger" id="burger"><span></span></button>
       </div>
     </header>
 
@@ -99,12 +105,9 @@
     </section>
 
     <!-- GRID -->
-    <section class="grid" aria-label="Перелік продуктів">
-      <!-- Автоцивілка -->
+    <section class="grid">
       <article class="card">
-        <img class="media" loading="lazy"
-             src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=70&auto=format&fit=crop"
-             alt="Автоцивілка">
+        <img class="media" src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?w=1200&q=70&auto=format&fit=crop" alt="Автоцивілка">
         <div class="body">
           <h2 class="h" data-i18n="osagoTitle">Автоцивілка</h2>
           <p class="d" data-i18n="osagoDesc">Електронний поліс ОСЦПВ за кілька хвилин</p>
@@ -114,12 +117,8 @@
         </div>
       </article>
 
-      <!-- Зелена карта -->
       <article class="card">
-        <img class="media" loading="lazy" referrerpolicy="no-referrer"
-             src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&q=70&auto=format&fit=crop"
-             alt="Зелена карта"
-             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<?xml version=&quot;1.0&quot;?><svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;750&quot; viewBox=&quot;0 0 1200 750&quot;><defs><linearGradient id=&quot;g&quot; x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;1&quot; y2=&quot;1&quot;><stop stop-color=&quot;%23e8f5e9&quot; offset=&quot;0&quot;/><stop stop-color=&quot;%23c8e6c9&quot; offset=&quot;1&quot;/></linearGradient></defs><rect width=&quot;1200&quot; height=&quot;750&quot; fill=&quot;url(%23g)&quot;/><g fill=&quot;%23388e3c&quot; font-family=&quot;Arial,Helvetica,sans-serif&quot; font-size=&quot;64&quot; font-weight=&quot;700&quot; opacity=&quot;.6&quot;><text x=&quot;50%&quot; y=&quot;50%&quot; dominant-baseline=&quot;middle&quot; text-anchor=&quot;middle&quot;>Зелена карта</text></g></svg>';">
+        <img class="media" src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=1200&q=70&auto=format&fit=crop" alt="Зелена карта">
         <div class="body">
           <h2 class="h" data-i18n="greenTitle">Зелена карта</h2>
           <p class="d" data-i18n="greenDesc">Міжнародне страхування для виїзду за кордон</p>
@@ -129,11 +128,8 @@
         </div>
       </article>
 
-      <!-- КАСКО -->
       <article class="card">
-        <img class="media" loading="lazy"
-             src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=70&auto=format&fit=crop"
-             alt="КАСКО">
+        <img class="media" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=70&auto=format&fit=crop" alt="КАСКО">
         <div class="body">
           <h2 class="h">КАСКО</h2>
           <p class="d" data-i18n="kaskoDesc">Комплексний захист вашого авто</p>
@@ -146,10 +142,6 @@
   </div>
 
   <script>
-    // Telegram WebApp (без влияния на палитру)
-    try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
-
-    // Мини-i18n: укр/рус
     const dict = {
       uk:{ title:'Страхові продукти', subtitle:'Обирайте продукт та оформлюйте поліс онлайн',
            choose:'Обрати', osagoTitle:'Автоцивілка', osagoDesc:'Електронний поліс ОСЦПВ за кілька хвилин',
@@ -161,22 +153,16 @@
            kaskoDesc:'Комплексная защита вашего авто' }
     };
     function applyLang(lang){
-      const d = dict[lang] || dict.uk;
+      const d=dict[lang]||dict.uk;
       document.querySelectorAll('[data-i18n]').forEach(el=>{
-        const k = el.getAttribute('data-i18n'); if(d[k]) el.textContent = d[k];
+        const k=el.getAttribute('data-i18n'); if(d[k]) el.textContent=d[k];
       });
-      document.documentElement.lang = (lang === 'ru' ? 'ru' : 'uk');
-      document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
-      localStorage.setItem('lang', lang);
+      document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+      localStorage.setItem('lang',lang);
     }
-    const saved = localStorage.getItem('lang') || 'uk';
-    applyLang(saved);
-    document.getElementById('lang').addEventListener('click', e=>{
-      if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang);
-    });
-
-    // Бургер-меню (заглушка)
-    document.getElementById('burger').addEventListener('click', ()=>alert('Меню скоро буде ✨'));
+    const saved=localStorage.getItem('lang')||'uk'; applyLang(saved);
+    document.getElementById('lang').addEventListener('click',e=>{if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang)});
+    document.getElementById('burger').addEventListener('click',()=>alert('Меню скоро буде ✨'));
   </script>
 </body>
 </html>
