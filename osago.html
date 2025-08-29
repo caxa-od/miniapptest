@@ -8,47 +8,102 @@
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
-  <div class="wrap">
-    <div class="header-bar">
-      <a class="back" href="index.html">← На головну</a>
-      <div style="margin-left:auto;display:flex;gap:8px;align-items:center;">
-        <span style="font-weight:700;color:#667085">Підтверджено в</span>
-        <span style="padding:6px 10px;border-radius:999px;background:#e9f7f0;color:#1f945a;font-weight:800">МТСБУ</span>
-        <span style="padding:6px 10px;border-radius:12px;background:#111;color:#fff;font-weight:800">Дія</span>
+  <div class="container">
+    <!-- ЕДИНАЯ ШАПКА (как на index.html) -->
+    <header class="header">
+      <div class="brand">
+        <span class="approved-label">Підтверджено в</span>
+        <div class="approved-logos">
+          <span class="chip chip-mtsbu">МТСБУ</span>
+          <span class="chip chip-diya">Дія</span>
+        </div>
       </div>
+      <div class="actions">
+        <div class="lang" id="lang">
+          <button data-lang="uk" class="active">УКР</button>
+          <button data-lang="ru">РУС</button>
+        </div>
+        <button class="burger" id="burger" aria-label="Меню"><span></span></button>
+      </div>
+    </header>
+
+    <!-- Контент страницы ОСЦПВ -->
+    <section class="hero">
+      <h1 class="title" data-i18n="osago_title">Електронний поліс ОСЦПВ</h1>
+      <p class="subtitle" data-i18n="osago_sub">Заповніть дані авто і розрахуйте вартість поліса.</p>
+    </section>
+
+    <div class="wrap" style="padding-top:0;">
+      <form id="form" class="form-card">
+        <div class="row">
+          <div class="field">
+            <label for="plate" data-i18n="label_plate">Номер ТЗ</label>
+            <input id="plate" name="plate" placeholder="AA1234AA" required
+                   pattern="[A-Za-zА-Яа-яІіЇїЄє0-9- ]{4,12}" />
+          </div>
+          <div class="field">
+            <label for="period" data-i18n="label_period">Період</label>
+            <select id="period" name="period">
+              <option value="12" data-i18n="opt_12">12 місяців</option>
+              <option value="6" data-i18n="opt_6">6 місяців</option>
+            </select>
+          </div>
+        </div>
+
+        <label class="check">
+          <input type="checkbox" name="no_paid">
+          <span data-i18n="label_checkbox">ТЗ не використовується для перевезення пасажирів за винагороду</span>
+        </label>
+
+        <button type="submit" class="btn" data-i18n="btn_calc">Розрахувати</button>
+      </form>
     </div>
-
-    <h1>Електронний поліс ОСЦПВ</h1>
-    <p class="sub">Заповніть дані авто і розрахуйте вартість поліса.</p>
-
-    <form id="form" class="form-card">
-      <div class="row">
-        <div class="field">
-          <label for="plate">Номер ТЗ</label>
-          <input id="plate" name="plate" placeholder="AA1234AA" required pattern="[A-Za-zА-Яа-яІіЇїЄє0-9- ]{4,12}" />
-        </div>
-        <div class="field">
-          <label for="period">Період</label>
-          <select id="period" name="period">
-            <option value="12">12 місяців</option>
-            <option value="6">6 місяців</option>
-          </select>
-        </div>
-      </div>
-
-      <label class="check">
-        <input type="checkbox" name="no_paid">
-        <span>ТЗ не використовується для перевезення пасажирів за винагороду</span>
-      </label>
-
-      <button type="submit" class="btn">Розрахувати</button>
-    </form>
   </div>
 
   <script>
-    const tg = window.Telegram?.WebApp;
-    try { tg?.ready(); tg?.expand(); } catch(e){}
+    // Telegram WebApp ready (без влияния на цвета)
+    try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
 
+    // Мини-i18n (укр/рус) — ключи для этой страницы + общие
+    const dict = {
+      uk:{
+        osago_title:'Електронний поліс ОСЦПВ',
+        osago_sub:'Заповніть дані авто і розрахуйте вартість поліса.',
+        label_plate:'Номер ТЗ',
+        label_period:'Період',
+        opt_12:'12 місяців',
+        opt_6:'6 місяців',
+        label_checkbox:'ТЗ не використовується для перевезення пасажирів за винагороду',
+        btn_calc:'Розрахувати'
+      },
+      ru:{
+        osago_title:'Электронный полис ОСЦПВ',
+        osago_sub:'Заполните данные авто и рассчитайте стоимость полиса.',
+        label_plate:'Номер ТС',
+        label_period:'Период',
+        opt_12:'12 месяцев',
+        opt_6:'6 месяцев',
+        label_checkbox:'ТС не используется для перевозки пассажиров за вознаграждение',
+        btn_calc:'Рассчитать'
+      }
+    };
+    function applyLang(lang){
+      const d = dict[lang] || dict.uk;
+      document.querySelectorAll('[data-i18n]').forEach(el=>{
+        const k = el.getAttribute('data-i18n'); if(d[k]) el.textContent = d[k];
+      });
+      document.querySelectorAll('#lang button').forEach(b=>b.classList.toggle('active', b.dataset.lang===lang));
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = (lang==='ru'?'ru':'uk');
+    }
+    const saved = localStorage.getItem('lang') || 'uk';
+    applyLang(saved);
+    document.getElementById('lang').addEventListener('click', e=>{
+      if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang);
+    });
+
+    // Сабмит формы → в бота или alert
+    const tg = window.Telegram?.WebApp;
     const form = document.getElementById('form');
     form.addEventListener('submit', (e)=>{
       e.preventDefault();
@@ -59,6 +114,9 @@
       if (tg?.sendData) tg.sendData(payload);
       else alert('Mock sendData: ' + payload);
     });
+
+    // Бургер-заглушка
+    document.getElementById('burger').addEventListener('click', ()=>alert('Меню скоро буде ✨'));
   </script>
 </body>
 </html>
