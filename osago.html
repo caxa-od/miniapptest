@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- Единая шапка -->
+    <!-- ШАПКА -->
     <header class="header">
       <div class="brand">
         <span class="approved-label">Підтверджено в</span>
@@ -27,12 +27,12 @@
       </div>
     </header>
 
-    <!-- Полоса с кнопкой назад (вернули «На головну») -->
+    <!-- Полоса с кнопкой назад -->
     <div class="bar">
       <a class="back" href="index.html">← На головну</a>
     </div>
 
-    <!-- Контент страницы ОСЦПВ -->
+    <!-- Контент -->
     <section class="hero" style="padding-top:12px;">
       <h1 class="title" data-i18n="osago_title">Електронний поліс ОСЦПВ</h1>
       <p class="subtitle" data-i18n="osago_sub">Заповніть дані авто і розрахуйте вартість поліса.</p>
@@ -68,7 +68,6 @@
   <script>
     try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
 
-    // i18n для страницы
     const dict = {
       uk:{
         osago_title:'Електронний поліс ОСЦПВ',
@@ -104,7 +103,6 @@
       if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang);
     });
 
-    // Отправка формы в бота/alert
     const tg = window.Telegram?.WebApp;
     document.getElementById('form').addEventListener('submit', (e)=>{
       e.preventDefault();
