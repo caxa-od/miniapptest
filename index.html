@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- ЕДИНАЯ ШАПКА -->
+    <!-- Единая шапка -->
     <header class="header">
       <div class="brand">
         <span class="approved-label">Підтверджено в</span>
@@ -27,13 +27,13 @@
       </div>
     </header>
 
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
       <h1 class="title" data-i18n="title">Страхові продукти</h1>
       <p class="subtitle" data-i18n="subtitle">Обирайте продукт та оформлюйте поліс онлайн</p>
     </section>
 
-    <!-- GRID -->
+    <!-- Cards -->
     <section class="grid">
       <!-- Автоцивілка -->
       <article class="card">
@@ -80,10 +80,8 @@
   </div>
 
   <script>
-    // Вебапп
     try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
 
-    // i18n укр/рус
     const dict = {
       uk:{ title:'Страхові продукти', subtitle:'Обирайте продукт та оформлюйте поліс онлайн',
            choose:'Обрати', osagoTitle:'Автоцивілка', osagoDesc:'Електронний поліс ОСЦПВ за кілька хвилин',
