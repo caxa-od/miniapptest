@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="container">
-    <!-- ЕДИНАЯ ШАПКА (как на index.html) -->
+    <!-- Единая шапка -->
     <header class="header">
       <div class="brand">
         <span class="approved-label">Підтверджено в</span>
@@ -27,13 +27,18 @@
       </div>
     </header>
 
+    <!-- Полоса с кнопкой назад (вернули «На головну») -->
+    <div class="bar">
+      <a class="back" href="index.html">← На головну</a>
+    </div>
+
     <!-- Контент страницы ОСЦПВ -->
-    <section class="hero">
+    <section class="hero" style="padding-top:12px;">
       <h1 class="title" data-i18n="osago_title">Електронний поліс ОСЦПВ</h1>
       <p class="subtitle" data-i18n="osago_sub">Заповніть дані авто і розрахуйте вартість поліса.</p>
     </section>
 
-    <div class="wrap" style="padding-top:0;">
+    <div class="wrap">
       <form id="form" class="form-card">
         <div class="row">
           <div class="field">
@@ -61,18 +66,16 @@
   </div>
 
   <script>
-    // Telegram WebApp ready (без влияния на цвета)
     try { window.Telegram?.WebApp?.ready(); window.Telegram?.WebApp?.expand(); } catch(e){}
 
-    // Мини-i18n (укр/рус) — ключи для этой страницы + общие
+    // i18n для страницы
     const dict = {
       uk:{
         osago_title:'Електронний поліс ОСЦПВ',
         osago_sub:'Заповніть дані авто і розрахуйте вартість поліса.',
         label_plate:'Номер ТЗ',
         label_period:'Період',
-        opt_12:'12 місяців',
-        opt_6:'6 місяців',
+        opt_12:'12 місяців', opt_6:'6 місяців',
         label_checkbox:'ТЗ не використовується для перевезення пасажирів за винагороду',
         btn_calc:'Розрахувати'
       },
@@ -81,8 +84,7 @@
         osago_sub:'Заполните данные авто и рассчитайте стоимость полиса.',
         label_plate:'Номер ТС',
         label_period:'Период',
-        opt_12:'12 месяцев',
-        opt_6:'6 месяцев',
+        opt_12:'12 месяцев', opt_6:'6 месяцев',
         label_checkbox:'ТС не используется для перевозки пассажиров за вознаграждение',
         btn_calc:'Рассчитать'
       }
@@ -102,20 +104,18 @@
       if(e.target.tagName==='BUTTON') applyLang(e.target.dataset.lang);
     });
 
-    // Сабмит формы → в бота или alert
+    // Отправка формы в бота/alert
     const tg = window.Telegram?.WebApp;
-    const form = document.getElementById('form');
-    form.addEventListener('submit', (e)=>{
+    document.getElementById('form').addEventListener('submit', (e)=>{
       e.preventDefault();
-      const data = Object.fromEntries(new FormData(form));
+      const data = Object.fromEntries(new FormData(e.target));
       data.form = 'osago';
-      data.no_paid = !!form.querySelector('input[name="no_paid"]').checked;
+      data.no_paid = !!e.target.querySelector('input[name="no_paid"]').checked;
       const payload = JSON.stringify(data);
       if (tg?.sendData) tg.sendData(payload);
       else alert('Mock sendData: ' + payload);
     });
 
-    // Бургер-заглушка
     document.getElementById('burger').addEventListener('click', ()=>alert('Меню скоро буде ✨'));
   </script>
 </body>
