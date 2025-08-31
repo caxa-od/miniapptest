@@ -5,12 +5,20 @@ import { initSheet } from './components/sheet.js';
 import { loadScreen } from './screens/loadScreen.js';
 import './state.js';
 
+console.log('[BOOT] main loaded at', location.href);
+
 async function bootstrap(){
-  initRouter();
-  initMenu();
-  initTabbar();
-  initSheet();
-  await loadScreen('home');
-  navigate('home');
+  try{
+    initRouter();
+    initMenu();
+    initTabbar();
+    initSheet();
+    console.log('[BOOT] load home');
+    await loadScreen('home');
+    navigate('home');
+    console.log('[BOOT] done');
+  }catch(e){
+    console.error('[BOOT ERROR]', e);
+  }
 }
 bootstrap();
