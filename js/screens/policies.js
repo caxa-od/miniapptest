@@ -1,5 +1,5 @@
-import { getPolicies } from '../../state.js';
-import { navigate } from '../../router.js';
+import { getPolicies } from '../state.js';
+import { navigate } from '../router.js';
 
 export function setupPolicies(section){
   const list = section.querySelector('#policyList');

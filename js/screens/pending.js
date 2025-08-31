@@ -1,4 +1,4 @@
-import { navigate } from '../../router.js';
+import { navigate } from '../router.js';
 let timerRef;
 export function setupPending(section){
   const timer = section.querySelector('#pendingTimer');

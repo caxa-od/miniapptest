@@ -1,5 +1,5 @@
-import { navigate } from '../../router.js';
-import { setOffers } from '../../state.js';
+import { navigate } from '../router.js';
+import { setOffers } from '../state.js';
 
 export function setupCalcGreen(section){
   const btn = section.querySelector('[data-action="calc"]');

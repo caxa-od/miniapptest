@@ -1,6 +1,6 @@
-import { getOffers } from '../../state.js';
-import { createOfferCard } from '../../components/offerCard.js';
-import { navigate } from '../../router.js';
+import { getOffers } from '../state.js';
+import { createOfferCard } from '../components/offerCard.js';
+import { navigate } from '../router.js';
 
 export function setupResultsGreen(section){
   const list = section.querySelector('#greenOffers');

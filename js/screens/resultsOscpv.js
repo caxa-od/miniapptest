@@ -1,6 +1,6 @@
-import { getOffers } from '../../state.js';
-import { createOfferCard } from '../../components/offerCard.js';
-import { navigate } from '../../router.js';
+import { getOffers } from '../state.js';
+import { createOfferCard } from '../components/offerCard.js';
+import { navigate } from '../router.js';
 
 export function setupResultsOscpv(section){
   const list = section.querySelector('#oscpvOffers');

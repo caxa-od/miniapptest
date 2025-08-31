@@ -1,4 +1,4 @@
-import { navigate } from '../../router.js';
+import { navigate } from '../router.js';
 
 export function setupFormOscpv(section){
   const form = section.querySelector('#oscpvFullForm');
