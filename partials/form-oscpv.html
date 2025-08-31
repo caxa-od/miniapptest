@@ -1,0 +1,69 @@
+<section class="screen form-screen" data-screen="form-oscpv">
+  <button class="link-back" data-nav="results-oscpv">← Повернутися</button>
+  <h1>Введіть дані договору</h1>
+  <div class="form-layout">
+    <form id="oscpvFullForm" class="form-sections">
+      <fieldset>
+        <legend>Період дії</legend>
+        <div class="readonly-box" id="oscpvPeriodSummary"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Особисті дані</legend>
+        <div class="grid-2">
+          <label class="form-field"><span>Прізвище</span><input name="lastName"></label>
+          <label class="form-field"><span>Ім’я</span><input name="firstName"></label>
+          <label class="form-field"><span>По батькові</span><input name="middleName"></label>
+          <label class="form-field"><span>ІПН</span><input name="taxId"></label>
+          <label class="form-field"><span>Дата народження</span><input name="birthDate" placeholder="ДД.ММ.РРРР"></label>
+          <label class="form-field"><span>Мобільний</span><input name="mobile" placeholder="+380"></label>
+          <label class="form-field wide"><span>Електронна пошта</span><input name="email" type="email"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Документ</legend>
+        <div class="grid-3">
+          <label class="form-field wide"><span>Тип документа</span>
+            <select name="docType"><option>Паспорт</option><option>ID-картка</option><option>Закордонний паспорт</option></select>
+          </label>
+          <label class="form-field"><span>Серія</span><input name="docSeries"></label>
+          <label class="form-field"><span>Номер</span><input name="docNumber"></label>
+          <label class="form-field wide"><span>Орган, що видав</span><input name="docIssuedBy"></label>
+          <label class="form-field"><span>Дата видачі</span><input name="docIssueDate" placeholder="ДД.ММ.РРРР"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Адреса</legend>
+        <div class="grid-4">
+          <label class="form-field"><span>Населений пункт</span><input name="city"></label>
+          <label class="form-field wide"><span>Вулиця</span><input name="street"></label>
+          <label class="form-field"><span>№ Буд.</span><input name="building"></label>
+          <label class="form-field"><span>№ Кв.</span><input name="apartment"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Транспортний засіб</legend>
+        <div class="grid-3">
+          <label class="form-field"><span>Держ. номер</span><input name="plate" placeholder="AA1234AA"></label>
+          <label class="form-field wide"><span>VIN</span><input name="vin"></label>
+          <label class="form-field"><span>Марка</span><input name="brand"></label>
+          <label class="form-field"><span>Модель</span><input name="model"></label>
+          <label class="form-field"><span>Рік випуску</span><input name="year"></label>
+          <label class="form-field"><span>Об’єм двигуна (см³)</span><input name="engineCapacityCc"></label>
+          <label class="form-field"><span>Потужність електродвигуна (кВт)</span><input name="electricPowerKw"></label>
+          <label class="form-field"><span>К-сть місць (з водієм)</span><input name="seatsWithDriver"></label>
+          <label class="form-field"><span>Повна маса (кг)</span><input name="grossWeightKg"></label>
+          <label class="form-field"><span>Маса без навантаження (кг)</span><input name="curbWeightKg"></label>
+          <label class="form-field"><span>Рік нар. власника</span><input name="ownerBirthYear"></label>
+        </div>
+      </fieldset>
+      <label class="checkbox consent">
+        <input type="checkbox" name="consent">
+        <span>Я підтверджую достовірність і даю згоду...</span>
+      </label>
+      <button class="btn btn-primary block" type="submit">Отримати пропозицію</button>
+    </form>
+    <aside class="summary-panel">
+      <div class="summary-card" id="oscpvSummary"></div>
+    </aside>
+  </div>
+</section>

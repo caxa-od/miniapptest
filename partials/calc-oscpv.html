@@ -1,0 +1,23 @@
+<section class="screen" data-screen="calc-oscpv">
+  <button class="link-back" data-nav="home">← Назад</button>
+  <h1 class="page-title">Електронний поліс ОСЦПВ</h1>
+  <div class="calc-card">
+    <label class="form-field">
+      <span>Номер транспортного засобу</span>
+      <input type="text" name="plate" placeholder="AA1234AA">
+      <small class="error-msg" hidden>Невірний формат</small>
+    </label>
+    <label class="form-field">
+      <span>Період дії</span>
+      <select name="period">
+        <option value="6">6 місяців</option>
+        <option value="12" selected>12 місяців</option>
+      </select>
+    </label>
+    <label class="checkbox">
+      <input type="checkbox" name="noPay" checked>
+      <span>ТЗ не використовується для перевезення пасажирів та/або вантажів за плату</span>
+    </label>
+    <button class="btn btn-primary" data-action="calc" disabled>Розрахувати</button>
+  </div>
+</section>

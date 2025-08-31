@@ -1,0 +1,4 @@
+{
+  "actions": { "buy": "Купити", "calculate": "Розрахувати" },
+  "errors": { "required": "Обов'язкове поле", "invalid_vin": "Невірний VIN" }
+}

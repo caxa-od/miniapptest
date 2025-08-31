@@ -1,0 +1,4 @@
+{
+  "actions": { "buy": "Купить", "calculate": "Рассчитать" },
+  "errors": { "required": "Обязательное поле", "invalid_vin": "Неверный VIN" }
+}

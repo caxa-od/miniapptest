@@ -1,0 +1,53 @@
+<section class="screen form-screen" data-screen="form-green">
+  <button class="link-back" data-nav="results-green">← Повернутися</button>
+  <h1>Введіть дані договору</h1>
+  <div class="form-layout">
+    <form id="greenFullForm" class="form-sections">
+      <fieldset>
+        <legend>Дані страхувальника</legend>
+        <div class="grid-2">
+          <label class="form-field"><span>Прізвище</span><input name="lastName"></label>
+          <label class="form-field"><span>Ім’я</span><input name="firstName"></label>
+          <label class="form-field"><span>ІПН</span><input name="taxId"></label>
+          <label class="form-field"><span>Дата народження</span><input name="birthDate" placeholder="ДД.ММ.РРРР"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Контактна інформація</legend>
+        <label class="form-field"><span>Адреса</span><input name="addressLine"></label>
+        <div class="grid-2">
+          <label class="form-field"><span>Телефон</span><input name="phone" placeholder="+380"></label>
+          <label class="form-field"><span>Ел. пошта</span><input name="email" type="email"></label>
+        </div>
+        <label class="form-field"><span>Місце реєстрації</span><input name="registrationPlace"></label>
+      </fieldset>
+      <fieldset>
+        <legend>Документ</legend>
+        <div class="grid-3">
+          <label class="form-field wide"><span>Тип документа</span>
+            <select name="docType"><option>Паспорт</option><option>ID-картка</option></select>
+          </label>
+          <label class="form-field"><span>Серія</span><input name="docSeries"></label>
+          <label class="form-field"><span>Номер</span><input name="docNumber"></label>
+          <label class="form-field wide"><span>Ким виданий</span><input name="docIssuedBy"></label>
+          <label class="form-field"><span>Дата видачі</span><input name="docIssueDate" placeholder="ДД.ММ.РРРР"></label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Дані авто</legend>
+        <div class="grid-2">
+          <label class="form-field"><span>Держ. номер</span><input name="plate"></label>
+          <label class="form-field"><span>Дата початку дії</span><input name="policyStartDate" placeholder="ДД.ММ.РРРР"></label>
+        </div>
+      </fieldset>
+      <label class="checkbox consent">
+        <input type="checkbox" name="consent">
+        <span>Я підтверджую достовірність і даю згоду...</span>
+      </label>
+      <button class="btn btn-primary block" type="submit">Отримати пропозицію</button>
+    </form>
+    <aside class="summary-panel">
+      <div class="summary-card" id="greenSummary"></div>
+    </aside>
+  </div>
+</section>
