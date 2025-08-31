@@ -1,8 +1,0 @@
-main{padding:16px 16px 80px;}
-.products-grid{display:grid;gap:16px;}
-.form-layout{display:flex;flex-direction:column;gap:24px;}
-@media (min-width:920px){
-  .form-layout{flex-direction:row;align-items:flex-start;}
-  .form-sections{flex:1;}
-  .summary-panel{width:280px;position:sticky;top:100px;}
-}
