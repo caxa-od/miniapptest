@@ -734,7 +734,7 @@
                 <!-- Services Grid -->
                 <div class="services-grid">
                     <!-- ОСАГО Card -->
-                    <div class="service-card blue" onclick="showCalculator()">
+                    <div class="service-card blue" id="osago-card" onclick="showCalculator()">
                         <div class="service-header">
                             <div class="service-icon blue">🚗</div>
                             <div class="service-content">
@@ -919,47 +919,81 @@
 
     <script src="script.js"></script>
     <script>
+        // Инициализация Telegram Web App
+        window.Telegram.WebApp.ready();
+        window.Telegram.WebApp.expand();
+        
+        // Отладка для проверки загрузки
+        console.log('App loaded, Telegram WebApp:', window.Telegram.WebApp);
+        
         // Navigation function for calculator
         function showCalculator() {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show calculator page
-            const calculatorPage = document.getElementById('calculator-page');
-            if (calculatorPage) {
-                calculatorPage.classList.add('active');
+            console.log('showCalculator called');
+            try {
+                // Hide all pages
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show calculator page
+                const calculatorPage = document.getElementById('calculator-page');
+                if (calculatorPage) {
+                    calculatorPage.classList.add('active');
+                    console.log('Calculator page shown');
+                } else {
+                    console.error('Calculator page not found');
+                }
+                
+                // Update navigation
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Добавляем тактильную обратную связь
+                if (window.Telegram.WebApp.HapticFeedback) {
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('light');
+                }
+                
+            } catch (error) {
+                console.error('Error in showCalculator:', error);
             }
-            
-            // Update navigation
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            
-            console.log('Показана страница калькулятора');
         }
         
         // Navigation function to go back to home
         function showHomePage() {
-            // Hide all pages
-            document.querySelectorAll('.page').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Show home page
-            const homePage = document.getElementById('home-page');
-            if (homePage) {
-                homePage.classList.add('active');
+            console.log('showHomePage called');
+            try {
+                // Hide all pages
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show home page
+                const homePage = document.getElementById('home-page');
+                if (homePage) {
+                    homePage.classList.add('active');
+                    console.log('Home page shown');
+                } else {
+                    console.error('Home page not found');
+                }
+                
+                // Update navigation
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                const homeNavItem = document.querySelector('[data-page="home-page"]');
+                if (homeNavItem) {
+                    homeNavItem.classList.add('active');
+                }
+                
+                // Добавляем тактильную обратную связь
+                if (window.Telegram.WebApp.HapticFeedback) {
+                    window.Telegram.WebApp.HapticFeedback.impactOccurred('light');
+                }
+                
+            } catch (error) {
+                console.error('Error in showHomePage:', error);
             }
-            
-            // Update navigation
-            document.querySelectorAll('.nav-item').forEach(item => {
-                item.classList.remove('active');
-            });
-            document.querySelector('[data-page="home-page"]')?.classList.add('active');
-            
-            console.log('Показана главная страница');
         }
         
         // Language switcher
@@ -974,6 +1008,23 @@
         
         // Calculator form functionality
         document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded');
+            
+            // Дополнительная привязка событий для надежности
+            const osagoCard = document.getElementById('osago-card');
+            if (osagoCard) {
+                osagoCard.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('OSAGO card clicked via addEventListener');
+                    showCalculator();
+                });
+                osagoCard.addEventListener('touchend', function(e) {
+                    e.preventDefault();
+                    console.log('OSAGO card touched');
+                    showCalculator();
+                });
+            }
+            
             const calculateBtn = document.querySelector('.calculate-btn');
             const vehicleInput = document.getElementById('vehicle-number');
             const periodSelect = document.getElementById('period');
