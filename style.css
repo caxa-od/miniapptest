@@ -139,7 +139,7 @@ body {
 
 #user-info {
     font-size: var(--font-size-sm);
-    color: var(--gray-600);
+    color: var(--gray-700); /* Изменено с --gray-600 для лучшей читаемости */
     font-weight: 500;
 }
 
@@ -188,7 +188,7 @@ body {
 
 .hero-subtitle {
     font-size: var(--font-size-xl);
-    color: var(--gray-600);
+    color: var(--gray-700); /* Изменено с --gray-600 для лучшей читаемости */
     margin-bottom: var(--space-8);
     font-weight: 500;
     max-width: 600px;
@@ -307,7 +307,7 @@ body {
 
 .service-content p {
     font-size: var(--font-size-base);
-    color: var(--gray-600);
+    color: var(--gray-700); /* Изменено с --gray-600 для лучшей читаемости */
     line-height: 1.6;
     margin-bottom: var(--space-8);
 }
@@ -475,7 +475,7 @@ body {
     padding: var(--space-3) var(--space-2);
     border-radius: var(--radius-lg);
     text-decoration: none;
-    color: var(--gray-500);
+    color: var(--gray-700); /* Изменено с --gray-500 для лучшей читаемости */
     font-size: var(--font-size-xs);
     font-weight: 600;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
