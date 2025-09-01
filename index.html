@@ -21,31 +21,48 @@
         <main class="main-content" id="main-content">
             <!-- Главная страница -->
             <div class="page active" id="home-page">
-                <h2>Главная страница</h2>
+                <h2>Наши услуги</h2>
                 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">🛡️</div>
-                        <h3>ОСАГО</h3>
-                        <p>Обязательное страхование</p>
+            <div class="services-container">
+                <!-- Карточка Автоцивілка -->
+                <div class="service-card large" data-service="civil" onclick="window.location.href='#calculator'">
+                    <div class="service-image">
+                        <img src="https://via.placeholder.com/400x180/007acc/ffffff?text=Автоцивілка" alt="Автоцивілка">
+                    </div>
+                    <div class="service-content">
+                        <h3>Автоцивілка (ОСЦПВ)</h3>
+                        <p>Обязательное страхование гражданско-правовой ответственности владельцев наземных транспортных средств. Защита от финансовых рисков при ДТП.</p>
+                        <button class="service-btn">Рассчитать стоимость</button>
+                    </div>
+                </div>
+                
+                <!-- Карточка Зелена карта -->
+                <div class="service-card large" data-service="green" onclick="window.location.href='#calculator'">
+                    <div class="service-image">
+                        <img src="https://via.placeholder.com/400x180/059669/ffffff?text=Зелена+карта" alt="Зелена карта">
+                    </div>
+                    <div class="service-content">
+                        <h3>Зелена карта</h3>
+                        <p>Международное страхование автогражданской ответственности для поездок за границу. Действует в 48 странах мира.</p>
+                        <button class="service-btn">Оформить полис</button>
+                    </div>
+                </div>
+            </div>                <!-- Дополнительная информация -->
+                <div class="info-section">
+                    <div class="info-card">
+                        <span class="info-icon">⚡</span>
+                        <div>
+                            <h4>Швидке оформлення</h4>
+                            <p>Поліс за 5 хвилин онлайн</p>
+                        </div>
                     </div>
                     
-                    <div class="service-card">
-                        <div class="service-icon">🚙</div>
-                        <h3>КАСКО</h3>
-                        <p>Добровольное страхование</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">📋</div>
-                        <h3>Мои полисы</h3>
-                        <p>Управление полисами</p>
-                    </div>
-                    
-                    <div class="service-card">
-                        <div class="service-icon">📞</div>
-                        <h3>Поддержка</h3>
-                        <p>Помощь 24/7</p>
+                    <div class="info-card">
+                        <span class="info-icon">�</span>
+                        <div>
+                            <h4>Вигідні ціни</h4>
+                            <p>Кращі умови від перевірених страховиків</p>
+                        </div>
                     </div>
                 </div>
             </div>
