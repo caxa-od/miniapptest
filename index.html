@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Автострахование - Mini App</title>
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Critical CSS for Telegram Mini App -->
+    <!-- Полностью встроенные стили для гарантированной работы в Telegram -->
     <style>
-        /* Critical styles to ensure loading */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
+        /* Полный CSS встроен для решения проблем с внешними файлами */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
             background: #FFFFFF;
             color: #111827;
             line-height: 1.5;
+            font-size: 16px;
         }
         
         .app {
@@ -41,13 +44,21 @@
         
         #user-info {
             font-size: 14px;
-            color: #374151; /* Более темный цвет для лучшей читаемости */
-            font-weight: 500;
+            color: #1F2937; /* Очень темный цвет для максимальной читаемости */
+            font-weight: 600;
         }
         
         .main-content {
             flex: 1;
-            padding: 32px 20px 100px 20px; /* Добавил отступ снизу для навигации */
+            padding: 32px 20px 100px 20px;
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
         }
         
         .hero-section {
@@ -60,22 +71,23 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: #E6F0FF;
-            color: #0052D6; /* Более темный синий для лучшей читаемости */
-            padding: 8px 16px;
+            background: #DBEAFE;
+            color: #1E40AF; /* Очень темный синий для максимальной читаемости */
+            padding: 10px 18px;
             border-radius: 12px;
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 15px;
+            font-weight: 700;
             margin-bottom: 24px;
-            border: 1px solid rgba(0, 82, 214, 0.3); /* Соответствующий цвет границы */
+            border: 2px solid #1E40AF;
         }
         
         .hero-badge::before {
             content: "✨";
+            font-size: 16px;
         }
         
         .hero-title {
-            font-size: clamp(30px, 5vw, 48px);
+            font-size: clamp(32px, 5vw, 48px);
             font-weight: 800;
             color: #111827;
             margin-bottom: 16px;
@@ -84,12 +96,13 @@
         
         .hero-subtitle {
             font-size: 20px;
-            color: #374151; /* Изменил с #6B7280 на более темный */
+            color: #1F2937; /* Очень темный цвет вместо серого */
             margin-bottom: 32px;
-            font-weight: 500;
+            font-weight: 600; /* Увеличен вес шрифта */
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.4;
         }
         
         .services-grid {
@@ -102,10 +115,10 @@
         
         .service-card {
             background: #FFFFFF;
-            border-radius: 32px;
+            border-radius: 24px;
             padding: 32px;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
-            border: 1px solid #E4E7EB;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 2px solid #E5E7EB;
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -119,7 +132,7 @@
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(135deg, #0066FF 0%, #0052D6 100%);
+            background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -130,9 +143,17 @@
         }
         
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-            border-color: #0066FF;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #1E40AF;
+        }
+        
+        .service-card.green::before {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+        
+        .service-card.green:hover {
+            border-color: #059669;
         }
         
         .service-header {
@@ -145,22 +166,25 @@
         .service-icon {
             width: 64px;
             height: 64px;
-            border-radius: 24px;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 28px;
             flex-shrink: 0;
+            border: 2px solid;
         }
         
         .service-icon.blue {
-            background: linear-gradient(135deg, #E6F0FF 0%, rgba(0, 102, 255, 0.1) 100%);
-            color: #0066FF;
+            background: linear-gradient(135deg, #DBEAFE 0%, #BFDBFE 100%);
+            color: #1E40AF;
+            border-color: #1E40AF;
         }
         
         .service-icon.green {
-            background: linear-gradient(135deg, rgba(0, 200, 150, 0.1) 0%, rgba(0, 200, 150, 0.05) 100%);
-            color: #00C896;
+            background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+            color: #059669;
+            border-color: #059669;
         }
         
         .service-content h3 {
@@ -172,14 +196,15 @@
         
         .service-content p {
             font-size: 16px;
-            color: #374151; /* Изменил с #6B7280 на более темный */
+            color: #1F2937; /* Очень темный цвет вместо серого */
             line-height: 1.6;
-            margin-bottom: 32px;
+            margin-bottom: 24px;
+            font-weight: 500; /* Увеличен вес шрифта */
         }
         
         .service-features {
             list-style: none;
-            margin: 0 0 32px 0;
+            margin: 0 0 24px 0;
             padding: 0;
         }
         
@@ -187,17 +212,24 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-size: 15px; /* Увеличил размер шрифта */
-            color: #1F2937; /* Изменил с #374151 на более темный */
+            font-size: 15px; /* Увеличен размер */
+            color: #111827; /* Самый темный цвет для максимальной читаемости */
             margin-bottom: 12px;
-            font-weight: 500; /* Добавил вес шрифта */
+            font-weight: 600; /* Жирный шрифт */
         }
         
         .service-features li::before {
             content: "✓";
-            color: #00C896;
-            font-weight: 700;
-            font-size: 16px;
+            color: #059669;
+            font-weight: 900; /* Очень жирный */
+            font-size: 18px;
+            background: #D1FAE5;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         .service-btn {
@@ -207,35 +239,128 @@
             gap: 8px;
             width: 100%;
             padding: 16px 24px;
-            background: linear-gradient(135deg, #0066FF 0%, #0052D6 100%);
+            background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
             color: white;
             border: none;
-            border-radius: 24px;
+            border-radius: 16px;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
         }
         
         .service-btn::after {
             content: "→";
             font-size: 18px;
+            font-weight: 900;
         }
         
         .service-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 16px rgba(30, 64, 175, 0.4);
         }
         
         .service-btn.green {
-            background: linear-gradient(135deg, #00C896 0%, #00A378 100%);
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        .service-btn.green:hover {
+            box-shadow: 0 8px 16px rgba(5, 150, 105, 0.4);
+        }
+        
+        .stats-section {
+            margin-top: 48px;
+            padding: 32px 24px;
+            background: #F9FAFB;
+            border-radius: 24px;
+            text-align: center;
+            border: 2px solid #E5E7EB;
+        }
+        
+        .stats-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 32px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 24px;
+        }
+        
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            color: #1E40AF;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #1F2937; /* Темный цвет */
+            font-weight: 600;
+        }
+        
+        .info-section {
+            margin-top: 32px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+        
+        .info-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #FFFFFF;
+            padding: 20px;
+            border-radius: 16px;
+            border: 2px solid #E5E7EB;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-icon {
+            font-size: 24px;
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F3F4F6;
+            border: 2px solid #D1D5DB;
+        }
+        
+        .info-content strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+        
+        .info-content span {
+            font-size: 14px;
+            color: #1F2937; /* Темный цвет */
+            font-weight: 500;
         }
         
         .bottom-nav {
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-top: 2px solid #E5E7EB;
             padding: 12px 16px;
             display: flex;
             justify-content: center;
@@ -244,6 +369,7 @@
             left: 0;
             right: 0;
             z-index: 1000;
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
         }
         
         .nav-container {
@@ -262,19 +388,33 @@
             padding: 12px 8px;
             border-radius: 12px;
             text-decoration: none;
-            color: #374151; /* Изменил с #6B7280 на более темный */
-            font-size: 13px; /* Увеличил размер шрифта */
-            font-weight: 600;
+            color: #1F2937; /* Очень темный цвет для навигации */
+            font-size: 13px;
+            font-weight: 700; /* Жирный шрифт */
             transition: all 0.2s ease;
         }
         
         .nav-item.active {
-            color: #0066FF;
-            background: #E6F0FF;
+            color: #1E40AF;
+            background: #DBEAFE;
+            border: 2px solid #1E40AF;
         }
         
         .nav-icon {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 900;
+        }
+        
+        .placeholder {
+            background: #F9FAFB;
+            border: 3px dashed #9CA3AF;
+            border-radius: 16px;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #1F2937; /* Темный цвет */
+            font-weight: 600;
+            margin-top: 20px;
         }
         
         /* Responsive */
@@ -282,6 +422,24 @@
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 32px;
+            }
+            
+            .main-content {
+                padding: 48px 32px 120px 32px;
+            }
+        }
+        
+        @media (max-width: 360px) {
+            .service-card {
+                padding: 20px;
+            }
+            
+            .hero-title {
+                font-size: 28px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
             }
         }
     </style>
