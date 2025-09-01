@@ -1,0 +1,29 @@
+{
+  "name": "telegram-miniapp-insurance",
+  "version": "1.0.0",
+  "description": "Simple Telegram Mini App for car insurance",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "deploy": "echo 'Deployed via GitHub Actions'",
+    "version": "echo $npm_package_version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caxa-od/miniapptest.git"
+  },
+  "keywords": [
+    "telegram",
+    "miniapp",
+    "insurance",
+    "osago",
+    "kasko",
+    "car-insurance"
+  ],
+  "author": "CAXA",
+  "license": "MIT",
+  "homepage": "https://caxa-od.github.io/miniapptest/",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
