@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Автострахование - Mini App</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Telegram Web App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Заголовок -->
+        <header class="header">
+            <h1>🚗 Автострахование</h1>
+            <p id="user-info">Добро пожаловать!</p>
+        </header>
+
+        <!-- Главный контент -->
+        <main class="main-content" id="main-content">
+            <!-- Главная страница -->
+            <div class="page active" id="home-page">
+                <h2>Главная страница</h2>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🛡️</div>
+                        <h3>ОСАГО</h3>
+                        <p>Обязательное страхование</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">🚙</div>
+                        <h3>КАСКО</h3>
+                        <p>Добровольное страхование</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📋</div>
+                        <h3>Мои полисы</h3>
+                        <p>Управление полисами</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">📞</div>
+                        <h3>Поддержка</h3>
+                        <p>Помощь 24/7</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Страница калькулятора -->
+            <div class="page" id="calculator-page">
+                <h2>Калькулятор ОСАГО</h2>
+                <p>Здесь будет калькулятор стоимости страхования</p>
+                <div class="placeholder">🧮 Калькулятор в разработке</div>
+            </div>
+
+            <!-- Страница полисов -->
+            <div class="page" id="policies-page">
+                <h2>Мои полисы</h2>
+                <p>Здесь будут отображаться ваши полисы</p>
+                <div class="placeholder">📄 Список полисов</div>
+            </div>
+
+            <!-- Страница профиля -->
+            <div class="page" id="profile-page">
+                <h2>Профиль</h2>
+                <p>Настройки и личная информация</p>
+                <div class="placeholder">👤 Профиль пользователя</div>
+            </div>
+        </main>
+
+        <!-- Нижняя навигация -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-page="home-page">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">Главная</span>
+            </button>
+            
+            <button class="nav-btn" data-page="calculator-page">
+                <span class="nav-icon">🧮</span>
+                <span class="nav-label">Расчет</span>
+            </button>
+            
+            <button class="nav-btn" data-page="policies-page">
+                <span class="nav-icon">📋</span>
+                <span class="nav-label">Полисы</span>
+            </button>
+            
+            <button class="nav-btn" data-page="profile-page">
+                <span class="nav-icon">👤</span>
+                <span class="nav-label">Профиль</span>
+            </button>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
