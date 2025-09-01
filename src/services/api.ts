@@ -23,8 +23,8 @@ const api = axios.create({
 // Интерсептор для добавления токена аутентификации
 api.interceptors.request.use((config) => {
   // Получаем данные из Telegram Web App
-  if (window.Telegram?.WebApp?.initData) {
-    config.headers.Authorization = `tma ${window.Telegram.WebApp.initData}`
+  if (typeof window !== 'undefined' && (window as any).Telegram?.WebApp?.initData) {
+    config.headers.Authorization = `tma ${(window as any).Telegram.WebApp.initData}`
   }
   return config
 })

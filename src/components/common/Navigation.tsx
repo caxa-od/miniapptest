@@ -1,10 +1,9 @@
 import React from 'react'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useTelegramWebApp } from '@/hooks/useTelegramWebApp'
 import './Navigation.css'
 
 const Navigation: React.FC = () => {
-  const location = useLocation()
   const { hapticFeedback } = useTelegramWebApp()
 
   const navItems = [
