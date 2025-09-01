@@ -57,19 +57,21 @@ function displayUserInfo() {
 
 // Инициализация навигации
 function initNavigation() {
-    const navButtons = document.querySelectorAll('.nav-btn');
+    const navItems = document.querySelectorAll('.nav-item');
     const pages = document.querySelectorAll('.page');
     
-    navButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const targetPageId = button.getAttribute('data-page');
+    navItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
             
-            // Убираем активный класс у всех кнопок и страниц
-            navButtons.forEach(btn => btn.classList.remove('active'));
+            const targetPageId = item.getAttribute('data-page');
+            
+            // Убираем активный класс у всех элементов навигации и страниц
+            navItems.forEach(nav => nav.classList.remove('active'));
             pages.forEach(page => page.classList.remove('active'));
             
-            // Добавляем активный класс к выбранной кнопке и странице
-            button.classList.add('active');
+            // Добавляем активный класс к выбранному элементу и странице
+            item.classList.add('active');
             document.getElementById(targetPageId).classList.add('active');
             
             // Вибрация при нажатии (если доступно)
