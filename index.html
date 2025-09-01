@@ -385,10 +385,9 @@
         }
         
         .bottom-nav {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(20px);
-            border-top: 2px solid #E5E7EB;
-            padding: 12px 16px;
+            background: #FFFFFF;
+            border-top: 1px solid #F3F4F6;
+            padding: 12px 20px 8px 20px;
             display: flex;
             justify-content: center;
             position: fixed;
@@ -396,14 +395,15 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
         }
         
         .nav-container {
             display: flex;
-            gap: 8px;
+            justify-content: space-around;
             max-width: 400px;
             width: 100%;
+            gap: 0;
         }
         
         .nav-item {
@@ -411,25 +411,56 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 4px;
-            padding: 12px 8px;
-            border-radius: 12px;
+            gap: 6px;
+            padding: 8px 4px;
             text-decoration: none;
-            color: #1F2937; /* Очень темный цвет для навигации */
-            font-size: 13px;
-            font-weight: 700; /* Жирный шрифт */
-            transition: all 0.2s ease;
+            color: #9CA3AF;
+            font-size: 11px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border-radius: 16px;
+            position: relative;
         }
         
         .nav-item.active {
-            color: #1E40AF;
-            background: #DBEAFE;
-            border: 2px solid #1E40AF;
+            color: #FFFFFF;
+        }
+        
+        .nav-item.active .nav-icon-bg {
+            background: #6366F1;
+            transform: scale(1);
+        }
+        
+        .nav-item.active .nav-icon {
+            color: #FFFFFF;
+        }
+        
+        .nav-icon-bg {
+            width: 48px;
+            height: 48px;
+            border-radius: 16px;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            transform: scale(0.85);
         }
         
         .nav-icon {
-            font-size: 22px;
-            font-weight: 900;
+            font-size: 20px;
+            color: #9CA3AF;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-label {
+            margin-top: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-item.active .nav-label {
+            color: #6366F1;
+            font-weight: 600;
         }
         
         .placeholder {
@@ -611,23 +642,31 @@
         <nav class="bottom-nav">
             <div class="nav-container">
                 <a href="#home" class="nav-item active" data-page="home-page">
-                    <span class="nav-icon">🏠</span>
-                    <span>Главная</span>
+                    <div class="nav-icon-bg">
+                        <span class="nav-icon">🏠</span>
+                    </div>
+                    <span class="nav-label">Головна</span>
                 </a>
                 
                 <a href="#calculator" class="nav-item" data-page="calculator-page">
-                    <span class="nav-icon">🧮</span>
-                    <span>Расчет</span>
+                    <div class="nav-icon-bg">
+                        <span class="nav-icon">🔍</span>
+                    </div>
+                    <span class="nav-label">Пошук</span>
                 </a>
                 
                 <a href="#policies" class="nav-item" data-page="policies-page">
-                    <span class="nav-icon">📋</span>
-                    <span>Полисы</span>
+                    <div class="nav-icon-bg">
+                        <span class="nav-icon">📋</span>
+                    </div>
+                    <span class="nav-label">Заявки</span>
                 </a>
                 
                 <a href="#profile" class="nav-item" data-page="profile-page">
-                    <span class="nav-icon">👤</span>
-                    <span>Профиль</span>
+                    <div class="nav-icon-bg">
+                        <span class="nav-icon">👤</span>
+                    </div>
+                    <span class="nav-label">Профіль</span>
                 </a>
             </div>
         </nav>
