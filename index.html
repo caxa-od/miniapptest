@@ -734,7 +734,7 @@
                 <!-- Services Grid -->
                 <div class="services-grid">
                     <!-- ОСАГО Card -->
-                    <div class="service-card blue" onclick="window.location.href='#calculator'">
+                    <div class="service-card blue" onclick="showCalculator()">
                         <div class="service-header">
                             <div class="service-icon blue">🚗</div>
                             <div class="service-content">
@@ -819,6 +819,9 @@
             <!-- Страница калькулятора -->
             <div class="page" id="calculator-page">
                 <div class="calculator-header">
+                    <button class="back-btn" onclick="showHomePage()" style="background: none; border: none; color: #059669; font-size: 16px; cursor: pointer; margin-bottom: 20px;">
+                        ← Назад
+                    </button>
                     <div class="calc-title-section">
                         <div class="calc-icon">🚗</div>
                         <div class="calc-title-text">
@@ -916,6 +919,49 @@
 
     <script src="script.js"></script>
     <script>
+        // Navigation function for calculator
+        function showCalculator() {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show calculator page
+            const calculatorPage = document.getElementById('calculator-page');
+            if (calculatorPage) {
+                calculatorPage.classList.add('active');
+            }
+            
+            // Update navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            console.log('Показана страница калькулятора');
+        }
+        
+        // Navigation function to go back to home
+        function showHomePage() {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Show home page
+            const homePage = document.getElementById('home-page');
+            if (homePage) {
+                homePage.classList.add('active');
+            }
+            
+            // Update navigation
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            document.querySelector('[data-page="home-page"]')?.classList.add('active');
+            
+            console.log('Показана главная страница');
+        }
+        
         // Language switcher
         document.querySelectorAll('.lang-btn').forEach(btn => {
             btn.addEventListener('click', () => {
