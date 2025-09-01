@@ -878,6 +878,444 @@
             background: #1F2937;
         }
         
+        /* Purchase Page Styles */
+        .purchase-header {
+            padding: 20px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .purchase-title-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .purchase-icon {
+            font-size: 32px;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .purchase-title-text h2 {
+            color: #1F2937;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 4px 0;
+        }
+        
+        .purchase-title-text p {
+            color: #6B7280;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+        .selected-offer {
+            padding: 20px;
+            background: #F9FAFB;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .selected-offer-header h3 {
+            color: #1F2937;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0 0 12px 0;
+        }
+        
+        .selected-offer-card {
+            background: white;
+            border: 2px solid #059669;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .selected-company {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .selected-logo {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .selected-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 4px;
+        }
+        
+        .selected-rating {
+            font-size: 12px;
+            color: #6B7280;
+        }
+        
+        .selected-price {
+            text-align: right;
+        }
+        
+        .selected-amount {
+            font-size: 20px;
+            font-weight: 700;
+            color: #059669;
+            margin-bottom: 4px;
+        }
+        
+        .selected-period {
+            font-size: 12px;
+            color: #6B7280;
+        }
+        
+        .purchase-form {
+            padding: 20px;
+        }
+        
+        .form-section {
+            margin-bottom: 32px;
+        }
+        
+        .form-section h3 {
+            color: #1F2937;
+            font-size: 20px;
+            font-weight: 600;
+            margin: 0 0 20px 0;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #E5E7EB;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #D1D5DB;
+            border-radius: 10px;
+            font-size: 16px;
+            color: #1F2937;
+            background: #FFFFFF;
+            transition: all 0.2s ease;
+            box-sizing: border-box;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #059669;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+        
+        .form-input::placeholder {
+            color: #9CA3AF;
+            font-size: 16px;
+        }
+        
+        .form-hint {
+            font-size: 14px;
+            color: #6B7280;
+            margin-top: 6px;
+            line-height: 1.4;
+        }
+        
+        .document-type {
+            background: #F3F4F6;
+            border: 1px solid #D1D5DB;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 16px;
+        }
+        
+        .document-label {
+            font-size: 16px;
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .doc-number-input {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .doc-series {
+            width: 60px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .doc-number {
+            flex: 1;
+        }
+        
+        .license-plate-input {
+            display: flex;
+            align-items: center;
+            border: 2px solid #D1D5DB;
+            border-radius: 10px;
+            background: #FFFFFF;
+            transition: all 0.2s ease;
+        }
+        
+        .license-plate-input:focus-within {
+            border-color: #059669;
+            box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+        }
+        
+        .country-code {
+            background: #374151;
+            color: white;
+            padding: 14px 12px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 8px 0 0 8px;
+        }
+        
+        .license-plate-input .form-input {
+            border: none;
+            border-radius: 0 8px 8px 0;
+            text-transform: uppercase;
+        }
+        
+        .license-plate-input .form-input:focus {
+            box-shadow: none;
+            border: none;
+        }
+        
+        .agreement-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+        
+        .agreement-text {
+            font-size: 15px;
+            color: #374151;
+            line-height: 1.6;
+        }
+        
+        .purchase-actions {
+            background: white;
+            border-top: 2px solid #E5E7EB;
+            padding: 24px 20px;
+            margin: 32px -20px -20px -20px;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        .purchase-btn {
+            width: 100%;
+            padding: 18px 24px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 480px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .form-row .form-group {
+                margin-bottom: 16px;
+            }
+            
+            .doc-number-input {
+                flex-direction: row;
+            }
+            
+            .form-section h3 {
+                font-size: 18px;
+            }
+            
+            .form-input {
+                padding: 12px 14px;
+                font-size: 16px;
+            }
+            
+            .purchase-btn {
+                font-size: 16px;
+                padding: 16px 20px;
+            }
+        }
+        
+        .purchase-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+        }
+        
+        .purchase-btn:active {
+            transform: translateY(0);
+        }
+        
+        .purchase-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .payment-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .payment-option {
+            cursor: pointer;
+        }
+        
+        .payment-option input[type="radio"] {
+            display: none;
+        }
+        
+        .payment-card {
+            border: 2px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+        
+        .payment-option input[type="radio"]:checked + .payment-card {
+            border-color: #059669;
+            background: #F0FDF4;
+        }
+        
+        .payment-icon {
+            font-size: 24px;
+            width: 48px;
+            height: 48px;
+            background: #F9FAFB;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .payment-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 4px;
+        }
+        
+        .payment-desc {
+            font-size: 14px;
+            color: #6B7280;
+        }
+        
+        .agreement-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #374151;
+            line-height: 1.5;
+        }
+        
+        .purchase-actions {
+            background: white;
+            border-top: 1px solid #E5E7EB;
+            padding: 20px;
+            margin: 0 -20px -20px -20px;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        .total-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #F9FAFB;
+            border-radius: 12px;
+        }
+        
+        .total-label {
+            font-size: 16px;
+            color: #6B7280;
+        }
+        
+        .total-amount {
+            font-size: 24px;
+            font-weight: 700;
+            color: #059669;
+        }
+        
+        .purchase-btn {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+        }
+        
+        .purchase-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+        }
+        
+        .purchase-btn:active {
+            transform: translateY(0);
+        }
+        
+        .purchase-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+        
         .placeholder {
             background: #F9FAFB;
             border: 3px dashed #9CA3AF;
@@ -1171,6 +1609,213 @@
                 </div>
             </div>
 
+            <!-- Страница оформления полиса -->
+            <div class="page" id="purchase-page">
+                <div class="purchase-header">
+                    <button class="back-btn" onclick="showCalculatorResults()" style="background: none; border: none; color: #059669; font-size: 16px; cursor: pointer; margin-bottom: 20px;">
+                        ← Назад до результатів
+                    </button>
+                    <div class="purchase-title-section">
+                        <div class="purchase-icon">🛡️</div>
+                        <div class="purchase-title-text">
+                            <h2>Оформлення полісу ОСЦПВ</h2>
+                            <p>Заповніть дані для оформлення полісу</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Выбранное предложение -->
+                <div class="selected-offer">
+                    <div class="selected-offer-header">
+                        <h3>Вибране пропозиція</h3>
+                    </div>
+                    <div class="selected-offer-card">
+                        <div class="selected-company">
+                            <div class="selected-logo">
+                                <div class="logo-placeholder" id="selected-company-logo" style="background: #059669; color: white; border-radius: 8px; padding: 8px; font-weight: bold; font-size: 12px;">USG</div>
+                            </div>
+                            <div class="selected-info">
+                                <div class="selected-name" id="selected-company-name">USG Insurance</div>
+                                <div class="selected-rating">⭐⭐⭐⭐⭐ Рейтинг МТСБУ</div>
+                            </div>
+                        </div>
+                        <div class="selected-price">
+                            <div class="selected-amount" id="selected-price">3349 ГРН</div>
+                            <div class="selected-period" id="selected-period">12 місяців</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Форма оформления -->
+                <div class="purchase-form">
+                    <div class="form-section">
+                        <h3>Особисті дані</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="surname">Прізвище</label>
+                                <input type="text" id="surname" placeholder="Введіть прізвище" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="first-name">Ім'я</label>
+                                <input type="text" id="first-name" placeholder="Введіть ім'я" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="patronymic">По батькові</label>
+                            <input type="text" id="patronymic" placeholder="Введіть по батькові" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="birth-date">Дата народження</label>
+                                <input type="date" id="birth-date" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Мобільний</label>
+                                <input type="tel" id="phone" placeholder="+380" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Електронна пошта</label>
+                            <input type="email" id="email" placeholder="example@email.com" class="form-input" required>
+                            <small class="form-hint">На цей e-mail ми відправимо електронний поліс</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Документ</h3>
+                        <div class="document-type">
+                            <span class="document-label">Паспорт</span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="doc-series">Серія і номер</label>
+                                <div class="doc-number-input">
+                                    <input type="text" id="doc-series" placeholder="АВ" class="form-input doc-series" maxlength="2">
+                                    <input type="text" id="doc-number" placeholder="123456" class="form-input doc-number" maxlength="6">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="doc-issued">Орган, що видав</label>
+                                <input type="text" id="doc-issued" placeholder="Київський РВ УМВС України в м. Києві" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="doc-date">Дата видачі</label>
+                            <input type="date" id="doc-date" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Адреса</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">Назва населеного пункту</label>
+                                <input type="text" id="city" placeholder="м. Київ, Україна" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="street">Назва вулиці</label>
+                                <input type="text" id="street" placeholder="Проспект Перемоги" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="building">№ будинка</label>
+                                <input type="text" id="building" placeholder="1" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="apartment">№ квартири</label>
+                                <input type="text" id="apartment" placeholder="1" class="form-input">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3>Транспортний засіб</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="license-plate">Державний номер</label>
+                                <div class="license-plate-input">
+                                    <span class="country-code">UA</span>
+                                    <input type="text" id="license-plate" placeholder="AA1234AA" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="vin-number">Номер кузова(VIN)</label>
+                                <input type="text" id="vin-number" placeholder="TMBYT1050RA268817" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-brand">Марка</label>
+                                <input type="text" id="car-brand" placeholder="Skoda" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-model">Модель</label>
+                                <input type="text" id="car-model" placeholder="Fabia" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="car-year">Рік випуску</label>
+                                <input type="number" id="car-year" placeholder="2016" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="engine-volume">Об'єм двигуна, куб. см</label>
+                                <input type="number" id="engine-volume" placeholder="1198" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="engine-power">Потужність електродвигуна, кВт</label>
+                                <input type="number" id="engine-power" placeholder="5" class="form-input">
+                            </div>
+                            <div class="form-group">
+                                <label for="seats">Кількість місць для сидіння, з водієм</label>
+                                <input type="number" id="seats" placeholder="5" class="form-input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="full-weight">Повна маса, кг</label>
+                                <input type="number" id="full-weight" placeholder="1450" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="empty-weight">Маса без навантаження, кг</label>
+                                <input type="number" id="empty-weight" placeholder="1095" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-year">Рік народження власника</label>
+                                <input type="number" id="owner-year" placeholder="1970" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <label class="agreement-checkbox">
+                            <input type="checkbox" id="agreement" required>
+                            <span class="checkmark"></span>
+                            <span class="agreement-text">Я підтверджую достовірність наданих мною даних. І даю згоду на обробку моїх персональних даних згідно Закону України "Про захист персональних даних" та Положення про обробку персональних даних ТОВ "Єва Страхова".</span>
+                        </label>
+                    </div>
+                    
+                    <div class="purchase-actions">
+                        <button type="button" class="purchase-btn" id="purchase-btn">
+                            Отримати пропозицію
+                        </button>
+                    </div>
+                </div>
+            </div>
+
             <!-- Страница полисов -->
             <div class="page" id="policies-page">
                 <h2>Мои полисы</h2>
@@ -1398,7 +2043,101 @@
                     }, 2000);
                 });
             }
+            
+            // Add event listeners for buy buttons
+            document.addEventListener('click', function(e) {
+                if (e.target.classList.contains('buy-btn')) {
+                    e.preventDefault();
+                    
+                    // Get offer card data
+                    const offerCard = e.target.closest('.offer-card');
+                    if (offerCard) {
+                        const companyLogo = offerCard.querySelector('.logo-placeholder')?.textContent || 'USG';
+                        const newPrice = offerCard.querySelector('.new-price')?.textContent || '3349 ГРН';
+                        const periodSelect = document.getElementById('period');
+                        const period = periodSelect ? periodSelect.value + ' місяців' : '12 місяців';
+                        
+                        console.log('Buy button clicked:', { companyLogo, newPrice, period });
+                        showPurchasePage(companyLogo + ' Insurance', newPrice, companyLogo, period);
+                    }
+                }
+            });
         });
+        
+        // Additional navigation functions
+        function showHomePage() {
+            console.log('showHomePage called');
+            try {
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                const homePage = document.getElementById('home-page');
+                if (homePage) {
+                    homePage.classList.add('active');
+                }
+                
+                document.querySelectorAll('.nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                const homeNavItem = document.querySelector('[data-page="home-page"]');
+                if (homeNavItem) {
+                    homeNavItem.classList.add('active');
+                }
+            } catch (error) {
+                console.error('Error in showHomePage:', error);
+            }
+        }
+        
+        function showCalculatorResults() {
+            console.log('showCalculatorResults called');
+            try {
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                const calculatorPage = document.getElementById('calculator-page');
+                if (calculatorPage) {
+                    calculatorPage.classList.add('active');
+                    
+                    const resultsSection = document.getElementById('results-section');
+                    if (resultsSection) {
+                        resultsSection.style.display = 'block';
+                    }
+                }
+            } catch (error) {
+                console.error('Error in showCalculatorResults:', error);
+            }
+        }
+        
+        function showPurchasePage(companyName, price, logo, period) {
+            console.log('showPurchasePage called');
+            try {
+                document.querySelectorAll('.page').forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                const purchasePage = document.getElementById('purchase-page');
+                if (purchasePage) {
+                    purchasePage.classList.add('active');
+                    
+                    // Update selected offer info
+                    const selectedLogo = document.getElementById('selected-company-logo');
+                    const selectedName = document.getElementById('selected-company-name');
+                    const selectedPrice = document.getElementById('selected-price');
+                    const selectedPeriod = document.getElementById('selected-period');
+                    const totalAmount = document.getElementById('total-amount');
+                    
+                    if (selectedLogo) selectedLogo.textContent = logo || 'USG';
+                    if (selectedName) selectedName.textContent = companyName || 'USG Insurance';
+                    if (selectedPrice) selectedPrice.textContent = price || '3349 ГРН';
+                    if (selectedPeriod) selectedPeriod.textContent = period || '12 місяців';
+                    if (totalAmount) totalAmount.textContent = price || '3349 ГРН';
+                }
+            } catch (error) {
+                console.error('Error in showPurchasePage:', error);
+            }
+        }
     </script>
 </body>
 </html>
