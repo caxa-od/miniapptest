@@ -1,0 +1,158 @@
+{
+  "visible": {
+    "offers": [
+      {
+        "company": "Предложение 1",
+        "price": "4015₴",
+        "index": 1
+      },
+      {
+        "company": "Предложение 2",
+        "price": "4208₴",
+        "index": 2
+      },
+      {
+        "company": "Предложение 3",
+        "price": "4233₴",
+        "index": 3
+      },
+      {
+        "company": "Предложение 4",
+        "price": "4402₴",
+        "index": 4
+      },
+      {
+        "company": "Предложение 5",
+        "price": "4411₴",
+        "index": 5
+      }
+    ],
+    "diagnostics": {
+      "tableCells": 20,
+      "tableRows": 5,
+      "priceElements": 5,
+      "allPriceTexts": [
+        {
+          "text": "4015 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4208 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4233 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4402 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4411 грн",
+          "tag": "TD",
+          "className": "Table__cell Table__cell_price",
+          "id": "",
+          "parent": "TR"
+        }
+      ],
+      "uniquePrices": [
+        "4015",
+        "4208",
+        "4233",
+        "4402",
+        "4411"
+      ]
+    }
+  },
+  "headless": {
+    "offers": [
+      {
+        "company": "Предложение 1",
+        "price": "4015₴",
+        "index": 1
+      },
+      {
+        "company": "Предложение 2",
+        "price": "4208₴",
+        "index": 2
+      },
+      {
+        "company": "Предложение 3",
+        "price": "4233₴",
+        "index": 3
+      },
+      {
+        "company": "Предложение 4",
+        "price": "4402₴",
+        "index": 4
+      },
+      {
+        "company": "Предложение 5",
+        "price": "4411₴",
+        "index": 5
+      }
+    ],
+    "diagnostics": {
+      "tableCells": 20,
+      "tableRows": 5,
+      "priceElements": 5,
+      "allPriceTexts": [
+        {
+          "text": "4015 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4208 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4233 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4402 грн",
+          "tag": "SPAN",
+          "className": "",
+          "id": "",
+          "parent": "DIV"
+        },
+        {
+          "text": "4411 грн",
+          "tag": "TD",
+          "className": "Table__cell Table__cell_price",
+          "id": "",
+          "parent": "TR"
+        }
+      ],
+      "uniquePrices": [
+        "4015",
+        "4208",
+        "4233",
+        "4402",
+        "4411"
+      ]
+    }
+  }
+}

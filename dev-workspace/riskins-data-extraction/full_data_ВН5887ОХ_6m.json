@@ -1,0 +1,31 @@
+{
+  "plateNumber": "ВН5887ОХ",
+  "period": 6,
+  "timestamp": "2025-09-03T17:56:44.353Z",
+  "carInfo": {
+    "city": "Одеса",
+    "country": "Україна",
+    "vehicleType": "легковий автомобіль",
+    "engineVolume": "2001 - 3000 см3",
+    "brand": "Не найдено",
+    "model": "Не найдено",
+    "raw": "м. Одеса, Одеський р-н, Одеська обл., Україна,\n        легковий автомобіль - 2001 - 3000 см3, Hyundai Santa Fe"
+  },
+  "offers": [
+    {
+      "company": "companyLogo?id=28",
+      "fullPrice": 3879,
+      "discountedPrice": 3879,
+      "discountPercentage": null,
+      "savings": 0,
+      "currency": "грн"
+    }
+  ],
+  "statistics": {
+    "totalOffers": 1,
+    "averagePrice": 3879,
+    "minPrice": 3879,
+    "maxPrice": 3879,
+    "priceRange": 0
+  }
+}

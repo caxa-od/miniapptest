@@ -1,0 +1,26 @@
+{
+  "name": "riskins-data-extractor",
+  "version": "1.0.0",
+  "description": "Извлечение данных страховых предложений с Riskins Insurance",
+  "main": "puppeteer-solution.js",
+  "scripts": {
+    "start": "node puppeteer-solution.js",
+    "test": "node test-extractor.js",
+    "dev": "node puppeteer-solution.js"
+  },
+  "dependencies": {
+    "puppeteer": "^21.3.6"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "author": "Insurance Data Team",
+  "license": "MIT",
+  "keywords": [
+    "insurance",
+    "web-scraping",
+    "puppeteer",
+    "data-extraction",
+    "riskins"
+  ]
+}

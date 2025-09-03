@@ -1,0 +1,533 @@
+{
+  "tableRows": [
+    {
+      "rowIndex": 0,
+      "cells": [
+        {
+          "cellIndex": 0,
+          "text": "Рейтинг МТСБУ ★★★",
+          "className": "Table__cell Table__cell_logo",
+          "innerHTML": "<img data-v-55bd948d=\"\" src=\"https://web.ewa.ua/ewa/api/binary/companyLogo?id=67\" alt=\"\"> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"text\">Рейтинг МТСБУ</span> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span></div></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 1,
+          "text": "12% 4015 грн\n        3533 грн",
+          "className": "Table__cell Table__cell_price",
+          "innerHTML": "<!----> <div data-v-55bd948d=\"\" class=\"Table__discount\"><span data-v-55bd948d=\"\">12%</span> <span data-v-55bd948d=\"\">4015 грн</span></div>\n        3533 грн\n      ",
+          "hasDiscount": true,
+          "discountInfo": {
+            "discountText": "12% 4015 грн",
+            "spans": [
+              "12%",
+              "4015 грн"
+            ]
+          }
+        },
+        {
+          "cellIndex": 2,
+          "text": "без обмежень",
+          "className": "Table__cell Table__cell_franchise",
+          "innerHTML": "<span data-v-55bd948d=\"\">без обмежень</span>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 3,
+          "text": "Купити\n           Додаткове покриття +100000 (+132.00 грн)+200000 (+180.00 грн)+300000 (+214.00 грн)+500000 (+252.00 грн)Не потрібно Додаткова інформація",
+          "className": "Table__cell Table__cell_button",
+          "innerHTML": "<button data-v-a4503762=\"\" data-v-55bd948d=\"\" class=\"Button Button_full\" id=\"btn_Buy\">Купити\n        </button> <div data-v-55bd948d=\"\" class=\"dgo-select\"><div data-v-027634c9=\"\" data-v-55bd948d=\"\" class=\"Select\"><label data-v-027634c9=\"\"><input data-v-027634c9=\"\" type=\"checkbox\" name=\"0.44085937541923736\" class=\"Select__main\"> <svg data-v-027634c9=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"Select__arrow\"><path data-v-027634c9=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg> <span data-v-027634c9=\"\" class=\"Select__placeholder\">Додаткове покриття</span> <div data-v-027634c9=\"\" class=\"Select__wrapper\"><div data-v-027634c9=\"\" class=\"Select__list\"><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.44085937541923736\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+100000 (+132.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.44085937541923736\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+200000 (+180.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.44085937541923736\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+300000 (+214.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.44085937541923736\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+500000 (+252.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.44085937541923736\" value=\"false\"><span data-v-027634c9=\"\" class=\"Select__title\">Не потрібно</span></label></div></div></label></div></div> <div data-v-55bd948d=\"\" style=\"margin-bottom: 10px;\"><span data-v-55bd948d=\"\" class=\"text\">Додаткова інформація</span> <svg data-v-55bd948d=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"InputSelect__arrow_rotate\"><path data-v-55bd948d=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        }
+      ],
+      "allText": "Рейтинг МТСБУ ★★★  12% 4015 грн\n        3533 грн\n       без обмежень Купити\n           Додаткове покриття +100000 (+132.00 грн)+200000 (+180.00 грн)+300000 (+214.00 грн)+500000 (+252.00 грн)Не потрібно Додаткова інформація"
+    },
+    {
+      "rowIndex": 1,
+      "cells": [
+        {
+          "cellIndex": 0,
+          "text": "Рейтинг МТСБУ ★★★★★",
+          "className": "Table__cell Table__cell_logo",
+          "innerHTML": "<img data-v-55bd948d=\"\" src=\"https://web.ewa.ua/ewa/api/binary/companyLogo?id=90\" alt=\"\"> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"text\">Рейтинг МТСБУ</span> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span></div></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 1,
+          "text": "12% 4208 грн\n        3703 грн",
+          "className": "Table__cell Table__cell_price",
+          "innerHTML": "<!----> <div data-v-55bd948d=\"\" class=\"Table__discount\"><span data-v-55bd948d=\"\">12%</span> <span data-v-55bd948d=\"\">4208 грн</span></div>\n        3703 грн\n      ",
+          "hasDiscount": true,
+          "discountInfo": {
+            "discountText": "12% 4208 грн",
+            "spans": [
+              "12%",
+              "4208 грн"
+            ]
+          }
+        },
+        {
+          "cellIndex": 2,
+          "text": "без обмежень",
+          "className": "Table__cell Table__cell_franchise",
+          "innerHTML": "<span data-v-55bd948d=\"\">без обмежень</span>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 3,
+          "text": "Купити\n           Додаткове покриття +500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно Додаткова інформація",
+          "className": "Table__cell Table__cell_button",
+          "innerHTML": "<button data-v-a4503762=\"\" data-v-55bd948d=\"\" class=\"Button Button_full\" id=\"btn_Buy\">Купити\n        </button> <div data-v-55bd948d=\"\" class=\"dgo-select\"><div data-v-027634c9=\"\" data-v-55bd948d=\"\" class=\"Select\"><label data-v-027634c9=\"\"><input data-v-027634c9=\"\" type=\"checkbox\" name=\"0.2819482477343729\" class=\"Select__main\"> <svg data-v-027634c9=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"Select__arrow\"><path data-v-027634c9=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg> <span data-v-027634c9=\"\" class=\"Select__placeholder\">Додаткове покриття</span> <div data-v-027634c9=\"\" class=\"Select__wrapper\"><div data-v-027634c9=\"\" class=\"Select__list\"><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.2819482477343729\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+500000 (+529.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.2819482477343729\" value=\"[object Object]\"><span data-v-027634c9=\"\" class=\"Select__title\">+1000000 (+970.00 грн)</span></label><label data-v-027634c9=\"\" class=\"Select__option\"><input data-v-027634c9=\"\" type=\"radio\" name=\"0.2819482477343729\" value=\"false\"><span data-v-027634c9=\"\" class=\"Select__title\">Не потрібно</span></label></div></div></label></div></div> <div data-v-55bd948d=\"\" style=\"margin-bottom: 10px;\"><span data-v-55bd948d=\"\" class=\"text\">Додаткова інформація</span> <svg data-v-55bd948d=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"InputSelect__arrow_rotate\"><path data-v-55bd948d=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        }
+      ],
+      "allText": "Рейтинг МТСБУ ★★★★★  12% 4208 грн\n        3703 грн\n       без обмежень Купити\n           Додаткове покриття +500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно Додаткова інформація"
+    },
+    {
+      "rowIndex": 2,
+      "cells": [
+        {
+          "cellIndex": 0,
+          "text": "Рейтинг МТСБУ ★★★★",
+          "className": "Table__cell Table__cell_logo",
+          "innerHTML": "<img data-v-55bd948d=\"\" src=\"https://web.ewa.ua/ewa/api/binary/companyLogo?id=61\" alt=\"\"> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"text\">Рейтинг МТСБУ</span> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span></div></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 1,
+          "text": "12% 4233 грн\n        3725 грн",
+          "className": "Table__cell Table__cell_price",
+          "innerHTML": "<!----> <div data-v-55bd948d=\"\" class=\"Table__discount\"><span data-v-55bd948d=\"\">12%</span> <span data-v-55bd948d=\"\">4233 грн</span></div>\n        3725 грн\n      ",
+          "hasDiscount": true,
+          "discountInfo": {
+            "discountText": "12% 4233 грн",
+            "spans": [
+              "12%",
+              "4233 грн"
+            ]
+          }
+        },
+        {
+          "cellIndex": 2,
+          "text": "без обмежень",
+          "className": "Table__cell Table__cell_franchise",
+          "innerHTML": "<span data-v-55bd948d=\"\">без обмежень</span>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 3,
+          "text": "Купити\n          Додаткова інформація",
+          "className": "Table__cell Table__cell_button",
+          "innerHTML": "<button data-v-a4503762=\"\" data-v-55bd948d=\"\" class=\"Button Button_full\" id=\"btn_Buy\">Купити\n        </button> <div data-v-55bd948d=\"\" class=\"dgo-select\"><!----></div> <div data-v-55bd948d=\"\" style=\"margin-bottom: 10px;\"><span data-v-55bd948d=\"\" class=\"text\">Додаткова інформація</span> <svg data-v-55bd948d=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"InputSelect__arrow_rotate\"><path data-v-55bd948d=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        }
+      ],
+      "allText": "Рейтинг МТСБУ ★★★★  12% 4233 грн\n        3725 грн\n       без обмежень Купити\n          Додаткова інформація"
+    },
+    {
+      "rowIndex": 3,
+      "cells": [
+        {
+          "cellIndex": 0,
+          "text": "Рейтинг МТСБУ ★★★★★",
+          "className": "Table__cell Table__cell_logo",
+          "innerHTML": "<img data-v-55bd948d=\"\" src=\"https://web.ewa.ua/ewa/api/binary/companyLogo?id=224\" alt=\"\"> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"text\">Рейтинг МТСБУ</span> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span></div></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 1,
+          "text": "18% 4402 грн\n        3610 грн",
+          "className": "Table__cell Table__cell_price",
+          "innerHTML": "<!----> <div data-v-55bd948d=\"\" class=\"Table__discount\"><span data-v-55bd948d=\"\">18%</span> <span data-v-55bd948d=\"\">4402 грн</span></div>\n        3610 грн\n      ",
+          "hasDiscount": true,
+          "discountInfo": {
+            "discountText": "18% 4402 грн",
+            "spans": [
+              "18%",
+              "4402 грн"
+            ]
+          }
+        },
+        {
+          "cellIndex": 2,
+          "text": "без обмежень",
+          "className": "Table__cell Table__cell_franchise",
+          "innerHTML": "<span data-v-55bd948d=\"\">без обмежень</span>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 3,
+          "text": "Купити\n          Додаткова інформація",
+          "className": "Table__cell Table__cell_button",
+          "innerHTML": "<button data-v-a4503762=\"\" data-v-55bd948d=\"\" class=\"Button Button_full\" id=\"btn_Buy\">Купити\n        </button> <div data-v-55bd948d=\"\" class=\"dgo-select\"><!----></div> <div data-v-55bd948d=\"\" style=\"margin-bottom: 10px;\"><span data-v-55bd948d=\"\" class=\"text\">Додаткова інформація</span> <svg data-v-55bd948d=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"InputSelect__arrow_rotate\"><path data-v-55bd948d=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        }
+      ],
+      "allText": "Рейтинг МТСБУ ★★★★★  18% 4402 грн\n        3610 грн\n       без обмежень Купити\n          Додаткова інформація"
+    },
+    {
+      "rowIndex": 4,
+      "cells": [
+        {
+          "cellIndex": 0,
+          "text": "Рейтинг МТСБУ ★★★★★",
+          "className": "Table__cell Table__cell_logo",
+          "innerHTML": "<img data-v-55bd948d=\"\" src=\"https://web.ewa.ua/ewa/api/binary/companyLogo?id=28\" alt=\"\"> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"text\">Рейтинг МТСБУ</span> <div data-v-55bd948d=\"\"><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span><span data-v-55bd948d=\"\" class=\"stars\">★</span></div></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 1,
+          "text": "4411 грн",
+          "className": "Table__cell Table__cell_price",
+          "innerHTML": "<!----> <!---->\n        4411 грн\n      ",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 2,
+          "text": "без обмежень",
+          "className": "Table__cell Table__cell_franchise",
+          "innerHTML": "<span data-v-55bd948d=\"\">без обмежень</span>",
+          "hasDiscount": false,
+          "discountInfo": null
+        },
+        {
+          "cellIndex": 3,
+          "text": "Купити\n          Додаткова інформація",
+          "className": "Table__cell Table__cell_button",
+          "innerHTML": "<button data-v-a4503762=\"\" data-v-55bd948d=\"\" class=\"Button Button_full\" id=\"btn_Buy\">Купити\n        </button> <div data-v-55bd948d=\"\" class=\"dgo-select\"><!----></div> <div data-v-55bd948d=\"\" style=\"margin-bottom: 10px;\"><span data-v-55bd948d=\"\" class=\"text\">Додаткова інформація</span> <svg data-v-55bd948d=\"\" width=\"13\" height=\"8\" viewBox=\"0 0 13 8\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" class=\"InputSelect__arrow_rotate\"><path data-v-55bd948d=\"\" fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M6.65689 5.60652L1.35359 0.303223L0.646484 1.01033L6.65689 7.02074L12.6673 1.01033L11.9602 0.303223L6.65689 5.60652Z\"></path></svg></div>",
+          "hasDiscount": false,
+          "discountInfo": null
+        }
+      ],
+      "allText": "Рейтинг МТСБУ ★★★★★  \n        4411 грн\n       без обмежень Купити\n          Додаткова інформація"
+    }
+  ],
+  "allPriceElements": [
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4015 грн\n        3533 грн",
+      "parent": "Table__row",
+      "hasPercent": true
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4015 грн",
+      "parent": "Table__cell Table__cell_price",
+      "hasPercent": true
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "4015 грн",
+      "parent": "Table__discount",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "Select__wrapper",
+      "text": "+100000 (+132.00 грн)+200000 (+180.00 грн)+300000 (+214.00 грн)+500000 (+252.00 грн)Не потрібно",
+      "parent": "",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "Select__list",
+      "text": "+100000 (+132.00 грн)+200000 (+180.00 грн)+300000 (+214.00 грн)+500000 (+252.00 грн)Не потрібно",
+      "parent": "Select__wrapper",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+100000 (+132.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+100000 (+132.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+200000 (+180.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+200000 (+180.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+300000 (+214.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+300000 (+214.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+500000 (+252.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+500000 (+252.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4208 грн\n        3703 грн",
+      "parent": "Table__row",
+      "hasPercent": true
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4208 грн",
+      "parent": "Table__cell Table__cell_price",
+      "hasPercent": true
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "4208 грн",
+      "parent": "Table__discount",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "dgo-select",
+      "text": "Додаткове покриття +500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно",
+      "parent": "Table__cell Table__cell_button",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "Select",
+      "text": "Додаткове покриття +500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно",
+      "parent": "dgo-select",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "",
+      "text": "Додаткове покриття +500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно",
+      "parent": "Select",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "Select__wrapper",
+      "text": "+500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно",
+      "parent": "",
+      "hasPercent": false
+    },
+    {
+      "tag": "DIV",
+      "className": "Select__list",
+      "text": "+500000 (+529.00 грн)+1000000 (+970.00 грн)Не потрібно",
+      "parent": "Select__wrapper",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+500000 (+529.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+500000 (+529.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "LABEL",
+      "className": "Select__option",
+      "text": "+1000000 (+970.00 грн)",
+      "parent": "Select__list",
+      "hasPercent": false
+    },
+    {
+      "tag": "SPAN",
+      "className": "Select__title",
+      "text": "+1000000 (+970.00 грн)",
+      "parent": "Select__option",
+      "hasPercent": false
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4233 грн\n        3725 грн",
+      "parent": "Table__row",
+      "hasPercent": true
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4233 грн",
+      "parent": "Table__cell Table__cell_price",
+      "hasPercent": true
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "4233 грн",
+      "parent": "Table__discount",
+      "hasPercent": false
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "18% 4402 грн\n        3610 грн",
+      "parent": "Table__row",
+      "hasPercent": true
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "18% 4402 грн",
+      "parent": "Table__cell Table__cell_price",
+      "hasPercent": true
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "4402 грн",
+      "parent": "Table__discount",
+      "hasPercent": false
+    },
+    {
+      "tag": "TBODY",
+      "className": "",
+      "text": "Рейтинг МТСБУ ★★★★★  \n        4411 грн\n       без обмежень Купити\n          Додаткова інформація",
+      "parent": "Table",
+      "hasPercent": false
+    },
+    {
+      "tag": "TR",
+      "className": "Table__row",
+      "text": "Рейтинг МТСБУ ★★★★★  \n        4411 грн\n       без обмежень Купити\n          Додаткова інформація",
+      "parent": "",
+      "hasPercent": false
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "4411 грн",
+      "parent": "Table__row",
+      "hasPercent": false
+    }
+  ],
+  "discountElements": [
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4015 грн\n        3533 грн",
+      "parent": "Table__row"
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4015 грн",
+      "parent": "Table__cell Table__cell_price"
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "12%",
+      "parent": "Table__discount"
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4208 грн\n        3703 грн",
+      "parent": "Table__row"
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4208 грн",
+      "parent": "Table__cell Table__cell_price"
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "12%",
+      "parent": "Table__discount"
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "12% 4233 грн\n        3725 грн",
+      "parent": "Table__row"
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "12% 4233 грн",
+      "parent": "Table__cell Table__cell_price"
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "12%",
+      "parent": "Table__discount"
+    },
+    {
+      "tag": "TD",
+      "className": "Table__cell Table__cell_price",
+      "text": "18% 4402 грн\n        3610 грн",
+      "parent": "Table__row"
+    },
+    {
+      "tag": "DIV",
+      "className": "Table__discount",
+      "text": "18% 4402 грн",
+      "parent": "Table__cell Table__cell_price"
+    },
+    {
+      "tag": "SPAN",
+      "className": "",
+      "text": "18%",
+      "parent": "Table__discount"
+    }
+  ],
+  "cellStructure": []
+}

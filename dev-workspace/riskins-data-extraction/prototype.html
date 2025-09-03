@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riskins Data Extraction Prototype</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f7;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #007aff;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+        
+        .btn {
+            background: #4A5BCC;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+        
+        .btn:hover {
+            background: #3A4BC2;
+        }
+        
+        .btn.secondary {
+            background: #6c757d;
+        }
+        
+        .btn.secondary:hover {
+            background: #545b62;
+        }
+        
+        .log-output {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 6px;
+            padding: 15px;
+            margin-top: 20px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .log-entry {
+            margin: 2px 0;
+            padding: 2px 5px;
+        }
+        
+        .log-info { color: #007aff; }
+        .log-success { color: #28a745; }
+        .log-error { color: #dc3545; }
+        .log-warning { color: #ffc107; }
+        
+        .results-grid {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .offer-card {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 15px;
+            background: white;
+        }
+        
+        .offer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .company-name {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .price {
+            font-size: 18px;
+            font-weight: 700;
+            color: #28a745;
+        }
+        
+        .old-price {
+            text-decoration: line-through;
+            color: #6c757d;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+        
+        .status {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        
+        .rating {
+            color: #ffa500;
+        }
+        
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .step {
+            margin: 10px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .step::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #007aff;
+            color: white;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 Riskins Data Extraction</h1>
+            <p>Прототип для извлечения данных с https://riskins-insurance.eua.in.ua/</p>
+        </div>
+
+        <div class="instructions">
+            <h3>📋 Инструкции для анализа Network запросов:</h3>
+            <div class="step" data-step="1">Откройте https://riskins-insurance.eua.in.ua/ в новой вкладке</div>
+            <div class="step" data-step="2">Нажмите F12 → вкладка Network</div>
+            <div class="step" data-step="3">Заполните форму: номер "AA1234AA", период "12 місяців", чекбокс включен</div>
+            <div class="step" data-step="4">Нажмите "Розрахувати" и найдите API запрос</div>
+            <div class="step" data-step="5">Скопируйте URL, headers и body запроса сюда</div>
+        </div>
+
+        <div class="test-section">
+            <h3>🧪 Тест формы (как на Riskins)</h3>
+            
+            <div class="form-group">
+                <label for="vehicleNumber">Номер транспортного засобу:</label>
+                <input type="text" id="vehicleNumber" value="AA1234AA" placeholder="AA1234AA">
+            </div>
+            
+            <div class="form-group">
+                <label for="period">Період дії:</label>
+                <select id="period">
+                    <option value="3">3 місяці</option>
+                    <option value="6">6 місяців</option>
+                    <option value="12" selected>12 місяців</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <input type="checkbox" id="isNotForTransport" checked>
+                    <label for="isNotForTransport">ТЗ не використовується для перевезення пасажирів та/або вантажів за плату</label>
+                </div>
+            </div>
+            
+            <button class="btn" onclick="simulateRequest()">🔄 Симулировать запрос</button>
+        </div>
+
+        <div class="test-section">
+            <h3>🌐 API Testing</h3>
+            
+            <div class="form-group">
+                <label for="apiUrl">API Endpoint:</label>
+                <input type="text" id="apiUrl" placeholder="https://riskins-insurance.eua.in.ua/api/...">
+            </div>
+            
+            <div class="form-group">
+                <label for="requestBody">Request Body (JSON):</label>
+                <textarea id="requestBody" rows="4" style="width: 100%; font-family: monospace;" placeholder='{"vehicleNumber": "AA1234AA", "period": 12, "isNotForTransport": true}'></textarea>
+            </div>
+            
+            <button class="btn" onclick="testDirectAPI()">🚀 Тест прямого API</button>
+            <button class="btn secondary" onclick="testWithProxy()">🔄 Тест через прокси</button>
+        </div>
+
+        <div id="results" class="results-grid" style="display: none;">
+            <h3>📊 Результаты извлечения:</h3>
+            <div id="offersContainer"></div>
+        </div>
+
+        <div class="log-output" id="logs">
+            <strong>Логи выполнения:</strong><br>
+        </div>
+    </div>
+
+    <script>
+        // Функция логирования
+        function log(message, type = 'info') {
+            const logsContainer = document.getElementById('logs');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('div');
+            logEntry.className = `log-entry log-${type}`;
+            logEntry.innerHTML = `[${timestamp}] ${message}`;
+            logsContainer.appendChild(logEntry);
+            logsContainer.scrollTop = logsContainer.scrollHeight;
+            console.log(`[${type.toUpperCase()}] ${message}`);
+        }
+
+        // Симуляция запроса (заглушка для тестирования UI)
+        function simulateRequest() {
+            const vehicleNumber = document.getElementById('vehicleNumber').value;
+            const period = document.getElementById('period').value;
+            const isNotForTransport = document.getElementById('isNotForTransport').checked;
+
+            log('🚗 Начинаю симуляцию запроса...', 'info');
+            log(`📝 Параметры: ${vehicleNumber}, ${period} мес., не для перевозок: ${isNotForTransport}`, 'info');
+
+            // Симулируем задержку
+            setTimeout(() => {
+                const mockData = generateMockOffers();
+                displayResults(mockData);
+                log(`✅ Получено ${mockData.length} предложений`, 'success');
+            }, 1500);
+        }
+
+        // Тест прямого API
+        async function testDirectAPI() {
+            const apiUrl = document.getElementById('apiUrl').value;
+            const requestBody = document.getElementById('requestBody').value;
+
+            if (!apiUrl) {
+                log('❌ Укажите API endpoint', 'error');
+                return;
+            }
+
+            log('🌐 Тестирую прямой API запрос...', 'info');
+            log(`📡 URL: ${apiUrl}`, 'info');
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: requestBody || JSON.stringify({
+                        vehicleNumber: document.getElementById('vehicleNumber').value,
+                        period: parseInt(document.getElementById('period').value),
+                        isNotForTransport: document.getElementById('isNotForTransport').checked
+                    })
+                });
+
+                log(`📊 Ответ: ${response.status} ${response.statusText}`, response.ok ? 'success' : 'error');
+
+                if (response.ok) {
+                    const data = await response.json();
+                    log(`📦 Данные получены: ${JSON.stringify(data).substring(0, 100)}...`, 'success');
+                    
+                    if (data.offers || data.quotes || Array.isArray(data)) {
+                        displayResults(data.offers || data.quotes || data);
+                    }
+                } else {
+                    const errorText = await response.text();
+                    log(`❌ Ошибка: ${errorText}`, 'error');
+                }
+
+            } catch (error) {
+                log(`❌ Сетевая ошибка: ${error.message}`, 'error');
+                log('💡 Возможные причины: CORS, неверный URL, сервер недоступен', 'warning');
+            }
+        }
+
+        // Тест через прокси (заглушка)
+        function testWithProxy() {
+            log('🔄 Тест через прокси пока не реализован', 'warning');
+            log('💡 Для реализации нужен backend прокси сервер', 'info');
+        }
+
+        // Генерация тестовых данных
+        function generateMockOffers() {
+            return [
+                {
+                    id: 'usg-1',
+                    companyName: 'USG',
+                    price: 3349,
+                    currency: 'грн',
+                    rating: 5,
+                    status: 'Без обмежень'
+                },
+                {
+                    id: 'arx-1',
+                    companyName: 'ARX',
+                    price: 3702,
+                    oldPrice: 4086,
+                    currency: 'грн',
+                    rating: 5,
+                    status: 'Без обмежень'
+                },
+                {
+                    id: 'knyazha-1',
+                    companyName: 'КНЯЖА',
+                    price: 4794,
+                    currency: 'грн',
+                    rating: 5,
+                    status: 'Без обмежень'
+                },
+                {
+                    id: 'etalon-1',
+                    companyName: 'ЕTALОН',
+                    price: 4424,
+                    oldPrice: 4944,
+                    currency: 'грн',
+                    rating: 5,
+                    status: 'Без обмежень'
+                },
+                {
+                    id: 'omega-1',
+                    companyName: '67Ω',
+                    price: 4483,
+                    oldPrice: 4981,
+                    currency: 'грн',
+                    rating: 5,
+                    status: 'Без обмежень'
+                }
+            ];
+        }
+
+        // Отображение результатов
+        function displayResults(offers) {
+            const resultsDiv = document.getElementById('results');
+            const container = document.getElementById('offersContainer');
+            
+            container.innerHTML = offers.map(offer => `
+                <div class="offer-card">
+                    <div class="offer-header">
+                        <span class="company-name">${offer.companyName}</span>
+                        <div class="price-block">
+                            ${offer.oldPrice ? `<span class="old-price">${offer.oldPrice} ${offer.currency}</span>` : ''}
+                            <span class="price">${offer.price} ${offer.currency || 'грн'}</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <span class="rating">${'⭐'.repeat(offer.rating || 5)} МТСБУ</span>
+                        <span class="status">${offer.status || 'Доступно'}</span>
+                    </div>
+                </div>
+            `).join('');
+            
+            resultsDiv.style.display = 'block';
+        }
+
+        // Инициализация
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🚀 Прототип Riskins Data Extraction загружен', 'success');
+            log('📝 Готов к тестированию различных подходов извлечения данных', 'info');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+{
+  "plateNumber": "AA1111AA",
+  "period6": {
+    "success": true,
+    "plateNumber": "AA1111AA",
+    "period": 6,
+    "offers": [
+      {
+        "index": 1,
+        "company": "Предложение 1",
+        "originalPrice": 4015,
+        "discountedPrice": 3533,
+        "discountPercent": 12,
+        "savings": 482,
+        "originalPriceFormatted": "4015₴",
+        "discountedPriceFormatted": "3533₴",
+        "savingsFormatted": "482₴"
+      },
+      {
+        "index": 2,
+        "company": "Предложение 2",
+        "originalPrice": 4208,
+        "discountedPrice": 3703,
+        "discountPercent": 12,
+        "savings": 505,
+        "originalPriceFormatted": "4208₴",
+        "discountedPriceFormatted": "3703₴",
+        "savingsFormatted": "505₴"
+      },
+      {
+        "index": 3,
+        "company": "Предложение 3",
+        "originalPrice": 4233,
+        "discountedPrice": 3725,
+        "discountPercent": 12,
+        "savings": 508,
+        "originalPriceFormatted": "4233₴",
+        "discountedPriceFormatted": "3725₴",
+        "savingsFormatted": "508₴"
+      },
+      {
+        "index": 4,
+        "company": "Предложение 4",
+        "originalPrice": 4402,
+        "discountedPrice": 3610,
+        "discountPercent": 18,
+        "savings": 792,
+        "originalPriceFormatted": "4402₴",
+        "discountedPriceFormatted": "3610₴",
+        "savingsFormatted": "792₴"
+      },
+      {
+        "index": 5,
+        "company": "Предложение 5",
+        "originalPrice": 4411,
+        "discountedPrice": 4411,
+        "discountPercent": 0,
+        "savings": 0,
+        "originalPriceFormatted": "4411₴",
+        "discountedPriceFormatted": "4411₴",
+        "savingsFormatted": "0₴"
+      }
+    ],
+    "statistics": {
+      "avgOriginalPrice": 4254,
+      "avgDiscountedPrice": 3796,
+      "avgSavings": 458,
+      "offersCount": 5
+    },
+    "extractedAt": "2025-09-03T17:49:04.614Z"
+  },
+  "period12": {
+    "success": true,
+    "plateNumber": "AA1111AA",
+    "period": 12,
+    "offers": [
+      {
+        "index": 1,
+        "company": "Предложение 1",
+        "originalPrice": 5736,
+        "discountedPrice": 5048,
+        "discountPercent": 12,
+        "savings": 688,
+        "originalPriceFormatted": "5736₴",
+        "discountedPriceFormatted": "5048₴",
+        "savingsFormatted": "688₴"
+      },
+      {
+        "index": 2,
+        "company": "Предложение 2",
+        "originalPrice": 6011,
+        "discountedPrice": 5290,
+        "discountPercent": 12,
+        "savings": 721,
+        "originalPriceFormatted": "6011₴",
+        "discountedPriceFormatted": "5290₴",
+        "savingsFormatted": "721₴"
+      },
+      {
+        "index": 3,
+        "company": "Предложение 3",
+        "originalPrice": 6048,
+        "discountedPrice": 5322,
+        "discountPercent": 12,
+        "savings": 726,
+        "originalPriceFormatted": "6048₴",
+        "discountedPriceFormatted": "5322₴",
+        "savingsFormatted": "726₴"
+      },
+      {
+        "index": 4,
+        "company": "Предложение 4",
+        "originalPrice": 6289,
+        "discountedPrice": 5157,
+        "discountPercent": 18,
+        "savings": 1132,
+        "originalPriceFormatted": "6289₴",
+        "discountedPriceFormatted": "5157₴",
+        "savingsFormatted": "1132₴"
+      },
+      {
+        "index": 5,
+        "company": "Предложение 5",
+        "originalPrice": 6302,
+        "discountedPrice": 6302,
+        "discountPercent": 0,
+        "savings": 0,
+        "originalPriceFormatted": "6302₴",
+        "discountedPriceFormatted": "6302₴",
+        "savingsFormatted": "0₴"
+      }
+    ],
+    "statistics": {
+      "avgOriginalPrice": 6077,
+      "avgDiscountedPrice": 5424,
+      "avgSavings": 653,
+      "offersCount": 5
+    },
+    "extractedAt": "2025-09-03T17:49:19.413Z"
+  },
+  "comparison": {
+    "avgOriginalPrice6": 4254,
+    "avgOriginalPrice12": 6077,
+    "avgDiscountedPrice6": 3796,
+    "avgDiscountedPrice12": 5424,
+    "originalDifference": 1823,
+    "discountedDifference": 1628,
+    "originalPercent": 43,
+    "discountedPercent": 43,
+    "recommendation": "12-месячная страховка со скидкой дороже на 43%. Рассмотрите 6-месячную."
+  },
+  "timestamp": "2025-09-03T17:49:19.450Z"
+}

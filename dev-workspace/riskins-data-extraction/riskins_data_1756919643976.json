@@ -1,0 +1,77 @@
+{
+  "timestamp": "2025-09-03T17:14:03.976Z",
+  "vehicleNumber": "AA1234AA",
+  "totalQuotes": 5,
+  "quotes": [
+    {
+      "id": "riskins_1756919643943_1",
+      "companyName": "Компания 1",
+      "price": 3349,
+      "oldPrice": 4294,
+      "discount": 22,
+      "currency": "грн",
+      "rating": 5,
+      "status": "Доступно",
+      "features": [],
+      "source": "Riskins Insurance",
+      "rawData": " Рейтинг МТСБУ ★★★★★  22% 4294 грн\n        3349 грн\n       без обмежень Купити\n           Додаткове покриття +100000 (+304.00 грн)+200000 (+426.00 грн)+300000 (+608.00 грн)+500000 (+851.00 грн)+100000"
+    },
+    {
+      "id": "riskins_1756919643944_2",
+      "companyName": "Компания 2",
+      "price": 3702,
+      "oldPrice": 4460,
+      "discount": 17,
+      "currency": "грн",
+      "rating": 5,
+      "status": "Доступно",
+      "features": [],
+      "source": "Riskins Insurance",
+      "rawData": " Рейтинг МТСБУ ★★★★★  17% 4460 грн\n        3702 грн\n       без обмежень Купити\n           Додаткове покриття +100000 (+220.50 грн)+250000 (+283.50 грн)+500000 (+369.00 грн)+1000000 (+387.00 грн)Не пот"
+    },
+    {
+      "id": "riskins_1756919643944_3",
+      "companyName": "Компания 3",
+      "price": 4794,
+      "oldPrice": null,
+      "discount": null,
+      "currency": "грн",
+      "rating": 5,
+      "status": "Доступно",
+      "features": [],
+      "source": "Riskins Insurance",
+      "rawData": " Рейтинг МТСБУ ★★★★★  \n        4794 грн\n       без обмежень Купити\n          Додаткова інформація "
+    },
+    {
+      "id": "riskins_1756919643944_4",
+      "companyName": "Компания 4",
+      "price": 4424,
+      "oldPrice": 5027,
+      "discount": 12,
+      "currency": "грн",
+      "rating": 5,
+      "status": "Доступно",
+      "features": [],
+      "source": "Riskins Insurance",
+      "rawData": " Рейтинг МТСБУ ★★★  12% 5027 грн\n        4424 грн\n       без обмежень Купити\n           Додаткове покриття +100000 (+189.00 грн)+200000 (+257.00 грн)+300000 (+306.00 грн)+500000 (+360.00 грн)Не потріб"
+    },
+    {
+      "id": "riskins_1756919643944_5",
+      "companyName": "Компания 5",
+      "price": 4483,
+      "oldPrice": 5094,
+      "discount": 12,
+      "currency": "грн",
+      "rating": 5,
+      "status": "Доступно",
+      "features": [],
+      "source": "Riskins Insurance",
+      "rawData": " Рейтинг МТСБУ ★★★★★  12% 5094 грн\n        4483 грн\n       без обмежень Купити\n           Додаткове покриття +500000 (+756.00 грн)+1000000 (+1386.00 грн)Не потрібно Додаткова інформація "
+    }
+  ],
+  "statistics": {
+    "minPrice": 3349,
+    "maxPrice": 4794,
+    "avgPrice": 4150
+  }
+}

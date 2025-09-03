@@ -1,0 +1,79 @@
+{
+  "plateNumber": "AA2222AA",
+  "period6": {
+    "success": true,
+    "plateNumber": "AA2222AA",
+    "period": 6,
+    "offers": [
+      {
+        "company": "Предложение 1",
+        "price": "2178₴",
+        "index": 1
+      },
+      {
+        "company": "Предложение 2",
+        "price": "2249₴",
+        "index": 2
+      },
+      {
+        "company": "Предложение 3",
+        "price": "2342₴",
+        "index": 3
+      },
+      {
+        "company": "Предложение 4",
+        "price": "2376₴",
+        "index": 4
+      },
+      {
+        "company": "Предложение 5",
+        "price": "2390₴",
+        "index": 5
+      }
+    ],
+    "avgPrice": 2307,
+    "extractedAt": "2025-09-03T17:43:16.632Z"
+  },
+  "period12": {
+    "success": true,
+    "plateNumber": "AA2222AA",
+    "period": 12,
+    "offers": [
+      {
+        "company": "Предложение 1",
+        "price": "3112₴",
+        "index": 1
+      },
+      {
+        "company": "Предложение 2",
+        "price": "3212₴",
+        "index": 2
+      },
+      {
+        "company": "Предложение 3",
+        "price": "3346₴",
+        "index": 3
+      },
+      {
+        "company": "Предложение 4",
+        "price": "3394₴",
+        "index": 4
+      },
+      {
+        "company": "Предложение 5",
+        "price": "3414₴",
+        "index": 5
+      }
+    ],
+    "avgPrice": 3296,
+    "extractedAt": "2025-09-03T17:43:32.091Z"
+  },
+  "comparison": {
+    "avgPrice6": 2307,
+    "avgPrice12": 3296,
+    "difference": 989,
+    "differencePercent": 43,
+    "recommendation": "12-месячная страховка дороже на 43%. Рассмотрите 6-месячную."
+  },
+  "timestamp": "2025-09-03T17:43:32.118Z"
+}

@@ -1,0 +1,31 @@
+{
+  "plateNumber": "AA1111AA",
+  "period": 6,
+  "timestamp": "2025-09-03T17:56:16.189Z",
+  "carInfo": {
+    "city": "Київ",
+    "country": "Україна",
+    "vehicleType": "легковий автомобіль",
+    "engineVolume": "2001 - 3000 см3",
+    "brand": "MERCEDES-BENZ",
+    "model": "S 400",
+    "raw": "м. Київ, Україна,\n        легковий автомобіль - 2001 - 3000 см3, MERCEDES-BENZ S 400"
+  },
+  "offers": [
+    {
+      "company": "companyLogo?id=28",
+      "fullPrice": 4411,
+      "discountedPrice": 4411,
+      "discountPercentage": null,
+      "savings": 0,
+      "currency": "грн"
+    }
+  ],
+  "statistics": {
+    "totalOffers": 1,
+    "averagePrice": 4411,
+    "minPrice": 4411,
+    "maxPrice": 4411,
+    "priceRange": 0
+  }
+}
