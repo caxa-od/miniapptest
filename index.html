@@ -1491,7 +1491,7 @@
                         <div class="form-group">
                             <label for="vehicle-number">Номер транспортного засобу</label>
                             <div class="input-with-help">
-                                <input type="text" id="vehicle-number" placeholder="AA1234AA" class="form-input">
+                                <input type="text" id="vehicle-number" placeholder="AA1234AA або ВН5887ОХ" class="form-input">
                                 <button class="help-btn" type="button">
                                     <span>?</span>
                                 </button>
@@ -2029,7 +2029,8 @@
             // Format vehicle number input
             if (vehicleInput) {
                 vehicleInput.addEventListener('input', function(e) {
-                    let value = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
+                    // Разрешаем латинские и кириллические буквы + цифры
+                    let value = e.target.value.toUpperCase().replace(/[^A-ZА-Я0-9]/g, '');
                     if (value.length > 8) value = value.slice(0, 8);
                     e.target.value = value;
                 });
