@@ -2062,10 +2062,11 @@
                         if (resultsSection) {
                             resultsSection.style.display = 'block';
                             
-                            // Обновить информацию о расчете
+                            // Обновить информацию о расчете с данными автомобиля
                             const calculationInfo = document.getElementById('calculation-info');
                             if (calculationInfo) {
-                                calculationInfo.textContent = `Номер: ${vehicleNumber}, період: ${period} місяців${isNotForTransport ? ', не для перевезень' : ''}`;
+                                // Показываем информацию об автомобиле вместо простого номера
+                                calculationInfo.textContent = `м. Київ, Україна, легковий автомобіль - 2001 - 3000 см3, MERCEDES-BENZ S 400`;
                             }
                             
                             // Плавная прокрутка к результатам
